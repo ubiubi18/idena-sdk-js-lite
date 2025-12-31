@@ -6,6 +6,7 @@
 
 # Node.js modules.
 node_modules/
+.npmrc
 
 # NPM's shrinkwrap.
 # We're using `package-lock.json` instead.
