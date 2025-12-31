@@ -1,9 +1,9 @@
-import type { EmbeddedContractType } from './contracts/types';
+import type { EmbeddedContractTypeValue } from './contracts/types';
 export declare class StoreToIpfsAttachment {
     private _size;
     private _cid;
     constructor(init?: Partial<{
-        size: EmbeddedContractType;
+        size: EmbeddedContractTypeValue;
         cid: Uint8Array;
     }>);
     set size(size: number);
@@ -11,6 +11,6 @@ export declare class StoreToIpfsAttachment {
     set cid(cid: Uint8Array);
     get cid(): Uint8Array;
     fromBytes(bytes: Uint8Array): this;
-    toBytes(): Uint8Array;
+    toBytes(): Uint8Array<ArrayBuffer>;
 }
 //# sourceMappingURL=storeToIpfsAttachment.d.ts.map

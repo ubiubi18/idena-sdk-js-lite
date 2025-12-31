@@ -1,6 +1,7 @@
 {
+  "plugin": ["typedoc-plugin-markdown"],
   "out": "./docs",
-  "name": "idena-sdk-js",
+  "name": "idena-sdk-js-lite",
   "theme": "markdown",
   "readme": "none",
   "tsconfig": "./tsconfig.bundle.json",

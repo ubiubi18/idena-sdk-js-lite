@@ -1,4 +1,10 @@
-import { ProtoTransaction, ProtoTransaction_Data } from '../proto/models';
+import { create, fromBinary, toBinary } from '@bufbuild/protobuf';
+import {
+  ProtoTransactionSchema,
+  type ProtoTransaction,
+  ProtoTransaction_DataSchema,
+  type ProtoTransaction_Data,
+} from '../proto/models_pb';
 import BN from 'bn.js';
 import { floatStringToDna, hexToUint8Array, toHexString } from '../../utils';
 import sha3 from 'js-sha3';
@@ -6,35 +12,86 @@ import { sender, sign } from '../../crypto';
 import type { JsonTransaction } from '../json';
 import { StoreToIpfsAttachment } from './attachments/storeToIpfsAttachment';
 
-export enum TransactionType {
-  SendTx = 0x0,
-  ActivationTx = 0x1,
-  InviteTx = 0x2,
-  KillTx = 0x3,
-  SubmitFlipTx = 0x4,
-  SubmitAnswersHashTx = 0x5,
-  SubmitShortAnswersTx = 0x6,
-  SubmitLongAnswersTx = 0x7,
-  EvidenceTx = 0x8,
-  OnlineStatusTx = 0x9,
-  KillInviteeTx = 0xa,
-  ChangeGodAddressTx = 0xb,
-  BurnTx = 0xc,
-  ChangeProfileTx = 0xd,
-  DeleteFlipTx = 0xe,
-  DeployContractTx = 0xf,
-  CallContractTx = 0x10,
-  TerminateContractTx = 0x11,
-  DelegateTx = 0x12,
-  UndelegateTx = 0x13,
-  KillDelegatorTx = 0x14,
-  StoreToIpfsTx = 0x15,
-}
+export type TransactionTypeKey =
+  | 'SendTx'
+  | 'ActivationTx'
+  | 'InviteTx'
+  | 'KillTx'
+  | 'SubmitFlipTx'
+  | 'SubmitAnswersHashTx'
+  | 'SubmitShortAnswersTx'
+  | 'SubmitLongAnswersTx'
+  | 'EvidenceTx'
+  | 'OnlineStatusTx'
+  | 'KillInviteeTx'
+  | 'ChangeGodAddressTx'
+  | 'BurnTx'
+  | 'ChangeProfileTx'
+  | 'DeleteFlipTx'
+  | 'DeployContractTx'
+  | 'CallContractTx'
+  | 'TerminateContractTx'
+  | 'DelegateTx'
+  | 'UndelegateTx'
+  | 'KillDelegatorTx'
+  | 'StoreToIpfsTx';
+
+export type TransactionTypeValue =
+  | 0x0
+  | 0x1
+  | 0x2
+  | 0x3
+  | 0x4
+  | 0x5
+  | 0x6
+  | 0x7
+  | 0x8
+  | 0x9
+  | 0xa
+  | 0xb
+  | 0xc
+  | 0xd
+  | 0xe
+  | 0xf
+  | 0x10
+  | 0x11
+  | 0x12
+  | 0x13
+  | 0x14
+  | 0x15;
+
+export const transactionType: Record<
+  TransactionTypeKey,
+  TransactionTypeValue
+> = {
+  SendTx: 0x0,
+  ActivationTx: 0x1,
+  InviteTx: 0x2,
+  KillTx: 0x3,
+  SubmitFlipTx: 0x4,
+  SubmitAnswersHashTx: 0x5,
+  SubmitShortAnswersTx: 0x6,
+  SubmitLongAnswersTx: 0x7,
+  EvidenceTx: 0x8,
+  OnlineStatusTx: 0x9,
+  KillInviteeTx: 0xa,
+  ChangeGodAddressTx: 0xb,
+  BurnTx: 0xc,
+  ChangeProfileTx: 0xd,
+  DeleteFlipTx: 0xe,
+  DeployContractTx: 0xf,
+  CallContractTx: 0x10,
+  TerminateContractTx: 0x11,
+  DelegateTx: 0x12,
+  UndelegateTx: 0x13,
+  KillDelegatorTx: 0x14,
+  StoreToIpfsTx: 0x15,
+};
 
 export class Transaction {
   private _nonce = 0;
   private _epoch = 0;
-  private _type: TransactionType | number = 0;
+  private _type: TransactionTypeValue | number = 0;
   private _to: Uint8Array | null = null;
   private _amount: BN | null = null;
   private _maxFee: BN | null = null;
@@ -47,7 +104,7 @@ export class Transaction {
     init?: Partial<{
       nonce: number;
       epoch: number;
-      type: TransactionType;
+      type: TransactionTypeValue;
       to: Uint8Array | string;
       amount: Uint8Array | string | number | BN;
       maxFee: Uint8Array | string | number | BN;
@@ -81,7 +138,7 @@ export class Transaction {
     return this._epoch;
   }
 
-  public set type(type: TransactionType) {
+  public set type(type: TransactionTypeValue) {
     this._type = type;
   }
 
@@ -143,9 +200,10 @@ export class Transaction {
     try {
       if (!this._signature || this._signature.length === 0) return null;
 
-      const data = ProtoTransaction_Data.encode(
+      const data = toBinary(
+        ProtoTransaction_DataSchema,
         this._createProtoTxData(),
-      ).finish();
+      );
 
       return sender(data, this._signature, true);
     } catch {
@@ -157,8 +215,8 @@ export class Transaction {
     const bytes = this.toBytes();
     let size = bytes.length;
     if (!this._signature || this._signature.length === 0) size += 67;
-    if (this.type === TransactionType.DeleteFlipTx) size += 1024 * 120;
-    if (this.type === TransactionType.StoreToIpfsTx) {
+    if (this.type === transactionType.DeleteFlipTx) size += 1024 * 120;
+    if (this.type === transactionType.StoreToIpfsTx) {
       const maxSize = 1024 * 1024;
       try {
         if (this.payload) {
@@ -189,13 +247,13 @@ export class Transaction {
   }
 
   public fromBytes(bytes: Uint8Array): Transaction {
-    const protoTx = ProtoTransaction.decode(bytes);
+    const protoTx = fromBinary(ProtoTransactionSchema, bytes);
     const protoTxData = protoTx.data;
 
     if (protoTxData) {
       this.nonce = protoTxData.nonce;
       this.epoch = protoTxData.epoch;
-      this.type = protoTxData.type;
+      this.type = protoTxData.type as TransactionTypeValue;
       this.to = protoTxData.to;
       this.amount = protoTxData.amount;
       this.maxFee = protoTxData.maxFee;
@@ -209,13 +267,13 @@ export class Transaction {
   }
 
   public fromJson(jsonTx: JsonTransaction): Transaction {
-    function getTxType(type: string): TransactionType {
-      if (!type?.length) return TransactionType.SendTx;
+    function getTxType(type: string): TransactionTypeValue {
+      if (!type?.length) return transactionType['SendTx'];
       const stringType = type[0]?.toUpperCase() + type.slice(1) + 'Tx';
-      return <TransactionType>(
-        (Object.entries(TransactionType).find(
+      return (
+        Object.entries(transactionType).find(
           ([key]) => key === stringType,
-        )?.[1] || TransactionType.SendTx)
+        )?.[1] || transactionType.SendTx
       );
     }
 
@@ -232,17 +290,19 @@ export class Transaction {
   }
 
   public toBytes(): Uint8Array {
-    const tx = ProtoTransaction.fromPartial({
+    const tx: ProtoTransaction = create(ProtoTransactionSchema, {
       data: this._createProtoTxData(),
       signature: this._signature ?? new Uint8Array(),
     });
-    return ProtoTransaction.encode(tx).finish();
+
+    return toBinary(ProtoTransactionSchema, tx);
   }
 
   public sign(key: string | Uint8Array | number[]): Transaction {
-    const data = ProtoTransaction_Data.encode(
+    const data = toBinary(
+      ProtoTransaction_DataSchema,
       this._createProtoTxData(),
-    ).finish();
+    );
     this._signature = sign(data, key);
     return this;
   }
@@ -252,7 +312,7 @@ export class Transaction {
   }
 
   private _createProtoTxData(): ProtoTransaction_Data {
-    return ProtoTransaction_Data.fromPartial({
+    return create(ProtoTransaction_DataSchema, {
       epoch: this._epoch,
       nonce: this._nonce,
       type: this._type,

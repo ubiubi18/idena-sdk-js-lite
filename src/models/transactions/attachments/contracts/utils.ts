@@ -6,12 +6,16 @@ import {
   hexToUint8Array,
   toHexString,
 } from '../../../../utils';
-import { ContractArgument, ContractArgumentFormat } from './types';
+import {
+  type ContractArgument,
+  type ContractArgumentFormatValue,
+  contractArgumentFormat,
+} from './types';
 
 Decimal.set({ toExpPos: 10000 });
 
 export function argumentFromBytes(
-  format: ContractArgumentFormat,
+  format: ContractArgumentFormatValue,
   index: number,
   bytes: Uint8Array,
 ): ContractArgument {
@@ -25,14 +29,14 @@ export function argumentFromBytes(
   switch (format) {
     case 'byte': {
       return {
-        format: ContractArgumentFormat.Byte,
+        format: contractArgumentFormat.Byte,
         index: index,
         value: bytes[0],
       };
     }
     case 'int8': {
       return {
-        format: ContractArgumentFormat.Int8,
+        format: contractArgumentFormat.Int8,
         index: index,
         value: bytes[0],
       };
@@ -40,7 +44,7 @@ export function argumentFromBytes(
     case 'uint64': {
       const res = Buffer.from(bytes).readBigUint64LE();
       return {
-        format: ContractArgumentFormat.Uint64,
+        format: contractArgumentFormat.Uint64,
         index: index,
         value: res.toString(10),
       };
@@ -48,7 +52,7 @@ export function argumentFromBytes(
     case 'int64': {
       const res = Buffer.from(bytes).readBigInt64LE();
       return {
-        format: ContractArgumentFormat.Int64,
+        format: contractArgumentFormat.Int64,
         index: index,
         value: res.toString(10),
       };
@@ -56,7 +60,7 @@ export function argumentFromBytes(
     case 'string': {
       const res = utf8ByteArrayToString(bytes);
       return {
-        format: ContractArgumentFormat.String,
+        format: contractArgumentFormat.String,
         index: index,
         value: res,
       };
@@ -64,14 +68,14 @@ export function argumentFromBytes(
     case 'bigint': {
       const res = new BN(bytes);
       return {
-        format: ContractArgumentFormat.Bigint,
+        format: contractArgumentFormat.Bigint,
         index: index,
         value: res.toString(10),
       };
     }
     case 'hex': {
       return {
-        format: ContractArgumentFormat.Hex,
+        format: contractArgumentFormat.Hex,
         index: index,
         value: toHexString(bytes),
       };
@@ -79,14 +83,14 @@ export function argumentFromBytes(
     case 'dna': {
       const bn = new BN(bytes);
       return {
-        format: ContractArgumentFormat.Dna,
+        format: contractArgumentFormat.Dna,
         index: index,
         value: dnaToFloatString(bn),
       };
     }
     default: {
       return {
-        format: ContractArgumentFormat.Default,
+        format: contractArgumentFormat.Default,
         index: index,
         value: toHexString(bytes),
       };
@@ -95,7 +99,7 @@ export function argumentFromBytes(
 }
 
 export function argumentsFromBytes(
-  formats: ContractArgumentFormat[],
+  formats: ContractArgumentFormatValue[],
   bytes: Uint8Array[],
 ): ContractArgument[] {
   return formats.map((format, idx) =>

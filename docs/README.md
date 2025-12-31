@@ -1,321 +1,100 @@
-idena-sdk-js
+**idena-sdk-js-lite**
 
-# idena-sdk-js
+***
 
-## Table of contents
+# idena-sdk-js-lite
 
-### Namespaces
+## Classes
 
-- [&lt;internal\&gt;](modules/internal_.md)
-
-### Enumerations
-
-- [ContractArgumentFormat](enums/ContractArgumentFormat.md)
-- [EmbeddedContractType](enums/EmbeddedContractType.md)
-- [TransactionType](enums/TransactionType.md)
-
-### Classes
-
-- [BcnProvider](classes/BcnProvider.md)
 - [CallContractAttachment](classes/CallContractAttachment.md)
-- [ContractProvider](classes/ContractProvider.md)
-- [DeployContractAttachment](classes/DeployContractAttachment.md)
-- [DnaProvider](classes/DnaProvider.md)
-- [IdenaProvider](classes/IdenaProvider.md)
-- [JsonBalance](classes/JsonBalance.md)
-- [JsonBlock](classes/JsonBlock.md)
-- [JsonEpoch](classes/JsonEpoch.md)
-- [JsonIdentity](classes/JsonIdentity.md)
-- [JsonIterateMap](classes/JsonIterateMap.md)
-- [JsonIterateMapItem](classes/JsonIterateMapItem.md)
-- [JsonReceipt](classes/JsonReceipt.md)
 - [JsonTransaction](classes/JsonTransaction.md)
-- [TerminateContractAttachment](classes/TerminateContractAttachment.md)
 - [Transaction](classes/Transaction.md)
 
-### Interfaces
+## Interfaces
 
 - [ContractArgument](interfaces/ContractArgument.md)
 
-### Variables
+## Type Aliases
 
-- [DNA\_BASE](README.md#dna_base)
-
-### Functions
-
-- [argumentFromBytes](README.md#argumentfrombytes)
-- [argumentToBytes](README.md#argumenttobytes)
-- [argumentsFromBytes](README.md#argumentsfrombytes)
-- [argumentsToBytes](README.md#argumentstobytes)
-- [calculateGasCost](README.md#calculategascost)
-- [dnaToFloatString](README.md#dnatofloatstring)
-- [floatStringToDna](README.md#floatstringtodna)
-- [hexToUint8Array](README.md#hextouint8array)
-- [privateKeyToAddress](README.md#privatekeytoaddress)
-- [privateKeyToPublicKey](README.md#privatekeytopublickey)
-- [publicKeyToAddress](README.md#publickeytoaddress)
-- [sender](README.md#sender)
-- [sign](README.md#sign)
-- [stripHexPrefix](README.md#striphexprefix)
-- [toHexString](README.md#tohexstring)
+- [ContractArgumentFormatKey](type-aliases/ContractArgumentFormatKey.md)
+- [ContractArgumentFormatValue](type-aliases/ContractArgumentFormatValue.md)
+- [EmbeddedContractTypeKey](type-aliases/EmbeddedContractTypeKey.md)
+- [EmbeddedContractTypeValue](type-aliases/EmbeddedContractTypeValue.md)
+- [ProtoAd](type-aliases/ProtoAd.md)
+- [ProtoAdBurnKey](type-aliases/ProtoAdBurnKey.md)
+- [ProtoAdTarget](type-aliases/ProtoAdTarget.md)
+- [ProtoAdVotingParams](type-aliases/ProtoAdVotingParams.md)
+- [ProtoBurnAttachment](type-aliases/ProtoBurnAttachment.md)
+- [ProtoCallContractAttachment](type-aliases/ProtoCallContractAttachment.md)
+- [ProtoChangeProfileAttachment](type-aliases/ProtoChangeProfileAttachment.md)
+- [ProtoDeleteFlipAttachment](type-aliases/ProtoDeleteFlipAttachment.md)
+- [ProtoDeployContractAttachment](type-aliases/ProtoDeployContractAttachment.md)
+- [ProtoFlipKey](type-aliases/ProtoFlipKey.md)
+- [ProtoFlipKey\_Data](type-aliases/ProtoFlipKey_Data.md)
+- [ProtoFlipPrivateKeys](type-aliases/ProtoFlipPrivateKeys.md)
+- [ProtoFlipSubmitAttachment](type-aliases/ProtoFlipSubmitAttachment.md)
+- [ProtoIpfsFlip](type-aliases/ProtoIpfsFlip.md)
+- [ProtoLongAnswerAttachment](type-aliases/ProtoLongAnswerAttachment.md)
+- [ProtoOnlineStatusAttachment](type-aliases/ProtoOnlineStatusAttachment.md)
+- [ProtoPrivateFlipKeysPackage](type-aliases/ProtoPrivateFlipKeysPackage.md)
+- [ProtoPrivateFlipKeysPackage\_Data](type-aliases/ProtoPrivateFlipKeysPackage_Data.md)
+- [ProtoProfile](type-aliases/ProtoProfile.md)
+- [ProtoProfile\_ProtoProfileAd](type-aliases/ProtoProfile_ProtoProfileAd.md)
+- [ProtoShortAnswerAttachment](type-aliases/ProtoShortAnswerAttachment.md)
+- [ProtoStoreToIpfsAttachment](type-aliases/ProtoStoreToIpfsAttachment.md)
+- [ProtoTerminateContractAttachment](type-aliases/ProtoTerminateContractAttachment.md)
+- [ProtoTransaction](type-aliases/ProtoTransaction.md)
+- [ProtoTransaction\_Data](type-aliases/ProtoTransaction_Data.md)
+- [TransactionTypeKey](type-aliases/TransactionTypeKey.md)
+- [TransactionTypeValue](type-aliases/TransactionTypeValue.md)
 
 ## Variables
 
-### DNA\_BASE
-
-• `Const` **DNA\_BASE**: ``"1000000000000000000"``
-
-#### Defined in
-
-[utils.ts:6](https://github.com/idena-network/idena-sdk-js/blob/master/src/utils.ts#L6)
+- [contractArgumentFormat](variables/contractArgumentFormat.md)
+- [DNA\_BASE](variables/DNA_BASE.md)
+- [embeddedContractType](variables/embeddedContractType.md)
+- [file\_models](variables/file_models.md)
+- [ProtoAdBurnKeySchema](variables/ProtoAdBurnKeySchema.md)
+- [ProtoAdSchema](variables/ProtoAdSchema.md)
+- [ProtoAdTargetSchema](variables/ProtoAdTargetSchema.md)
+- [ProtoAdVotingParamsSchema](variables/ProtoAdVotingParamsSchema.md)
+- [ProtoBurnAttachmentSchema](variables/ProtoBurnAttachmentSchema.md)
+- [ProtoCallContractAttachmentSchema](variables/ProtoCallContractAttachmentSchema.md)
+- [ProtoChangeProfileAttachmentSchema](variables/ProtoChangeProfileAttachmentSchema.md)
+- [ProtoDeleteFlipAttachmentSchema](variables/ProtoDeleteFlipAttachmentSchema.md)
+- [ProtoDeployContractAttachmentSchema](variables/ProtoDeployContractAttachmentSchema.md)
+- [ProtoFlipKey\_DataSchema](variables/ProtoFlipKey_DataSchema.md)
+- [ProtoFlipKeySchema](variables/ProtoFlipKeySchema.md)
+- [ProtoFlipPrivateKeysSchema](variables/ProtoFlipPrivateKeysSchema.md)
+- [ProtoFlipSubmitAttachmentSchema](variables/ProtoFlipSubmitAttachmentSchema.md)
+- [ProtoIpfsFlipSchema](variables/ProtoIpfsFlipSchema.md)
+- [ProtoLongAnswerAttachmentSchema](variables/ProtoLongAnswerAttachmentSchema.md)
+- [ProtoOnlineStatusAttachmentSchema](variables/ProtoOnlineStatusAttachmentSchema.md)
+- [ProtoPrivateFlipKeysPackage\_DataSchema](variables/ProtoPrivateFlipKeysPackage_DataSchema.md)
+- [ProtoPrivateFlipKeysPackageSchema](variables/ProtoPrivateFlipKeysPackageSchema.md)
+- [ProtoProfile\_ProtoProfileAdSchema](variables/ProtoProfile_ProtoProfileAdSchema.md)
+- [ProtoProfileSchema](variables/ProtoProfileSchema.md)
+- [ProtoShortAnswerAttachmentSchema](variables/ProtoShortAnswerAttachmentSchema.md)
+- [ProtoStoreToIpfsAttachmentSchema](variables/ProtoStoreToIpfsAttachmentSchema.md)
+- [ProtoTerminateContractAttachmentSchema](variables/ProtoTerminateContractAttachmentSchema.md)
+- [ProtoTransaction\_DataSchema](variables/ProtoTransaction_DataSchema.md)
+- [ProtoTransactionSchema](variables/ProtoTransactionSchema.md)
+- [transactionType](variables/transactionType.md)
 
 ## Functions
 
-### argumentFromBytes
-
-▸ **argumentFromBytes**(`format`, `index`, `bytes`): [`ContractArgument`](interfaces/ContractArgument.md)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `format` | [`ContractArgumentFormat`](enums/ContractArgumentFormat.md) |
-| `index` | `number` |
-| `bytes` | `Uint8Array` |
-
-#### Returns
-
-[`ContractArgument`](interfaces/ContractArgument.md)
-
-___
-
-### argumentToBytes
-
-▸ **argumentToBytes**(`data`): `Uint8Array`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | [`ContractArgument`](interfaces/ContractArgument.md) |
-
-#### Returns
-
-`Uint8Array`
-
-___
-
-### argumentsFromBytes
-
-▸ **argumentsFromBytes**(`formats`, `bytes`): [`ContractArgument`](interfaces/ContractArgument.md)[]
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `formats` | [`ContractArgumentFormat`](enums/ContractArgumentFormat.md)[] |
-| `bytes` | `Uint8Array`[] |
-
-#### Returns
-
-[`ContractArgument`](interfaces/ContractArgument.md)[]
-
-___
-
-### argumentsToBytes
-
-▸ **argumentsToBytes**(`args`): `Uint8Array`[]
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `args` | [`ContractArgument`](interfaces/ContractArgument.md)[] |
-
-#### Returns
-
-`Uint8Array`[]
-
-___
-
-### calculateGasCost
-
-▸ **calculateGasCost**(`feePerGas`, `gas`): `string`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `feePerGas` | `string` \| `BN` |
-| `gas` | `number` |
-
-#### Returns
-
-`string`
-
-___
-
-### dnaToFloatString
-
-▸ **dnaToFloatString**(`value`): `string`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` \| `BN` |
-
-#### Returns
-
-`string`
-
-___
-
-### floatStringToDna
-
-▸ **floatStringToDna**(`value`): `BN`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `string` |
-
-#### Returns
-
-`BN`
-
-___
-
-### hexToUint8Array
-
-▸ **hexToUint8Array**(`hexString`): `Uint8Array`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `hexString` | `string` |
-
-#### Returns
-
-`Uint8Array`
-
-___
-
-### privateKeyToAddress
-
-▸ **privateKeyToAddress**(`key`, `withPrefix?`): `string`
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `key` | `string` \| `Uint8Array` \| `number`[] | `undefined` |
-| `withPrefix` | `boolean` | `true` |
-
-#### Returns
-
-`string`
-
-___
-
-### privateKeyToPublicKey
-
-▸ **privateKeyToPublicKey**(`key`, `withPrefix?`): `string`
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `key` | `string` \| `Uint8Array` \| `number`[] | `undefined` |
-| `withPrefix` | `boolean` | `false` |
-
-#### Returns
-
-`string`
-
-___
-
-### publicKeyToAddress
-
-▸ **publicKeyToAddress**(`publicKey`, `withPrefix?`): `string`
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `publicKey` | `string` \| `Uint8Array` \| `number`[] | `undefined` |
-| `withPrefix` | `boolean` | `true` |
-
-#### Returns
-
-`string`
-
-___
-
-### sender
-
-▸ **sender**(`data`, `signature`, `withPrefix?`): `string`
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `data` | `Uint8Array` \| `number`[] | `undefined` |
-| `signature` | `Uint8Array` \| `number`[] | `undefined` |
-| `withPrefix` | `boolean` | `true` |
-
-#### Returns
-
-`string`
-
-___
-
-### sign
-
-▸ **sign**(`data`, `key`): `Uint8Array`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `Uint8Array` \| `number`[] |
-| `key` | `string` \| `Uint8Array` \| `number`[] |
-
-#### Returns
-
-`Uint8Array`
-
-___
-
-### stripHexPrefix
-
-▸ **stripHexPrefix**(`str`): `string`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `str` | `string` |
-
-#### Returns
-
-`string`
-
-___
-
-### toHexString
-
-▸ **toHexString**(`byteArray`, `withPrefix?`): `string`
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `byteArray` | `Uint8Array` \| `number`[] | `undefined` |
-| `withPrefix` | `boolean` | `true` |
-
-#### Returns
-
-`string`
+- [argumentFromBytes](functions/argumentFromBytes.md)
+- [argumentsFromBytes](functions/argumentsFromBytes.md)
+- [argumentsToBytes](functions/argumentsToBytes.md)
+- [argumentToBytes](functions/argumentToBytes.md)
+- [calculateGasCost](functions/calculateGasCost.md)
+- [dnaToFloatString](functions/dnaToFloatString.md)
+- [floatStringToDna](functions/floatStringToDna.md)
+- [hexToUint8Array](functions/hexToUint8Array.md)
+- [privateKeyToAddress](functions/privateKeyToAddress.md)
+- [privateKeyToPublicKey](functions/privateKeyToPublicKey.md)
+- [publicKeyToAddress](functions/publicKeyToAddress.md)
+- [sender](functions/sender.md)
+- [sign](functions/sign.md)
+- [stripHexPrefix](functions/stripHexPrefix.md)
+- [toHexString](functions/toHexString.md)

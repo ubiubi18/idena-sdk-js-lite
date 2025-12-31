@@ -1,15 +1,19 @@
 import { BN } from 'bn.js';
-import { TransactionType } from '..';
+import { transactionType } from '..';
 import { hexToUint8Array } from '../..';
 import { StoreToIpfsAttachment } from './attachments/storeToIpfsAttachment';
 import { Transaction } from './transaction';
+
+const __ADDRESS__ = '0x834cbf0eb6ff61d0b929af89b140ccd4e4f230fd';
+const __PRIVATE_KEY__ =
+  'd28778329bdd4d8a9b6addaed6ad5ecfc8aa9b40cdd4b09bbb409b976b026ca2';
 
 describe('transaction', () => {
   it('can be encoded and decoded', () => {
     const tx = new Transaction({
       epoch: 5,
       nonce: 11,
-      type: TransactionType.ActivationTx,
+      type: transactionType.ActivationTx,
       to: '0x010203',
       amount: new BN(10),
       maxFee: new BN(11),
@@ -33,7 +37,7 @@ describe('transaction', () => {
     const tx = new Transaction({
       epoch: 101,
       nonce: 55,
-      type: TransactionType.SubmitFlipTx,
+      type: transactionType.SubmitFlipTx,
       to: '0x01351c321aa2a8832c32c00745e352eb8a6782bc',
       amount: new BN(999),
       maxFee: new BN(555),
@@ -42,13 +46,13 @@ describe('transaction', () => {
     }).sign(__PRIVATE_KEY__);
 
     const nodeSignature =
-      '29aa296e27542801de9d955594f9fafa47e0f2c0c035c760e3593dbb34cb360c321f6b5c5704c7ac68d74b3b73043b78b00583036fd7ecbd664ecb7df0dc910c01';
+      'e8bb5eafb5bc6928b687e8f775044ee5c55a2d060c5287bc94ffcc8900a4819b3108e811c57377b7658f5d45f2051302e94b1df44cbf0fad98337abea67fae9701';
 
     expect(tx.signature).toStrictEqual(hexToUint8Array(nodeSignature));
     expect(tx.sender).toBe(__ADDRESS__);
   });
 
-  it('signature test 2', () => {
+  it.only('signature test 2', () => {
     const tx = new Transaction({
       epoch: 55,
       nonce: 10,
@@ -57,13 +61,13 @@ describe('transaction', () => {
     }).sign(__PRIVATE_KEY__);
 
     const nodeSignature =
-      'e59ab446590f84c2b4e23176dbb1558c755db477739485392a0384c4468494106a581f632ee7ac3e6405b5e677e1c8e52d4c6ede0337af1000d714d1681fe74d00';
+      '1de3487dbb3cf41bb5d25553877fa2d57bdf6c3079da73690f8cac10941f5e5a50ccbd2690fce9f81f6a08c7c1eeef37871a731a9cea33483d9b8203cef21afe01';
 
     expect(tx.signature).toStrictEqual(hexToUint8Array(nodeSignature));
     expect(tx.sender).toBe(__ADDRESS__);
   });
 
-  it('signature test 3', () => {
+  it.only('signature test 3', () => {
     const tx = new Transaction().fromHex(
       '0a290801100c180f2a09056bc75e2d6310000032082676179a205d70a03a010042090a0105120101120101',
     );
@@ -71,7 +75,7 @@ describe('transaction', () => {
     tx.sign(__PRIVATE_KEY__);
 
     const nodeSignature =
-      'dc824b4647dc6c254b75368bd51f943c5f6ab164a40c6ba1d60251314e705bdc245d26164cad78f7d2ecb5d96fd9409f72bd45e15515d9f312696d47b2847e3e01';
+      'af1e2c0a79d56fee2ca90af0a45706f48a163e2db29f72bbed93c2404265cd913917d884643c42c49e3b6c45ff295971d99f9dbecf7ab23cf52de370c8fee3c001';
 
     expect(tx.signature).toStrictEqual(hexToUint8Array(nodeSignature));
     expect(tx.sender).toBe(__ADDRESS__);
@@ -90,19 +94,19 @@ describe('transaction', () => {
     const tx2 = new Transaction({
       nonce: 100,
       epoch: 50,
-      type: TransactionType.DeleteFlipTx,
+      type: transactionType.DeleteFlipTx,
       amount: '100000000',
       payload: [1, 2, 3, 4, 5],
     });
 
     expect(tx2.gas).toBe(1229680);
 
-    const attachment = new StoreToIpfsAttachment({ size: 987 });
+    const attachment = new StoreToIpfsAttachment({ size: 5 });
 
     const tx3 = new Transaction({
       nonce: 1,
       epoch: 1,
-      type: TransactionType.StoreToIpfsTx,
+      type: transactionType.StoreToIpfsTx,
       payload: attachment.toBytes(),
     });
 

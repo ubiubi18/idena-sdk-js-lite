@@ -1,29 +1,8 @@
 import BN from 'bn.js';
 import type { JsonTransaction } from '../json';
-export declare enum TransactionType {
-    SendTx = 0,
-    ActivationTx = 1,
-    InviteTx = 2,
-    KillTx = 3,
-    SubmitFlipTx = 4,
-    SubmitAnswersHashTx = 5,
-    SubmitShortAnswersTx = 6,
-    SubmitLongAnswersTx = 7,
-    EvidenceTx = 8,
-    OnlineStatusTx = 9,
-    KillInviteeTx = 10,
-    ChangeGodAddressTx = 11,
-    BurnTx = 12,
-    ChangeProfileTx = 13,
-    DeleteFlipTx = 14,
-    DeployContractTx = 15,
-    CallContractTx = 16,
-    TerminateContractTx = 17,
-    DelegateTx = 18,
-    UndelegateTx = 19,
-    KillDelegatorTx = 20,
-    StoreToIpfsTx = 21
-}
+export type TransactionTypeKey = 'SendTx' | 'ActivationTx' | 'InviteTx' | 'KillTx' | 'SubmitFlipTx' | 'SubmitAnswersHashTx' | 'SubmitShortAnswersTx' | 'SubmitLongAnswersTx' | 'EvidenceTx' | 'OnlineStatusTx' | 'KillInviteeTx' | 'ChangeGodAddressTx' | 'BurnTx' | 'ChangeProfileTx' | 'DeleteFlipTx' | 'DeployContractTx' | 'CallContractTx' | 'TerminateContractTx' | 'DelegateTx' | 'UndelegateTx' | 'KillDelegatorTx' | 'StoreToIpfsTx';
+export type TransactionTypeValue = 0x0 | 0x1 | 0x2 | 0x3 | 0x4 | 0x5 | 0x6 | 0x7 | 0x8 | 0x9 | 0xa | 0xb | 0xc | 0xd | 0xe | 0xf | 0x10 | 0x11 | 0x12 | 0x13 | 0x14 | 0x15;
+export declare const transactionType: Record<TransactionTypeKey, TransactionTypeValue>;
 export declare class Transaction {
     private _nonce;
     private _epoch;
@@ -37,7 +16,7 @@ export declare class Transaction {
     constructor(init?: Partial<{
         nonce: number;
         epoch: number;
-        type: TransactionType;
+        type: TransactionTypeValue;
         to: Uint8Array | string;
         amount: Uint8Array | string | number | BN;
         maxFee: Uint8Array | string | number | BN;
@@ -48,7 +27,7 @@ export declare class Transaction {
     get nonce(): number;
     set epoch(epoch: number);
     get epoch(): number;
-    set type(type: TransactionType);
+    set type(type: TransactionTypeValue);
     get type(): number;
     set to(to: string | Uint8Array | null);
     get to(): string | null;

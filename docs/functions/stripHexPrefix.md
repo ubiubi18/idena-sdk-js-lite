@@ -1,0 +1,21 @@
+[**idena-sdk-js-lite**](../README.md)
+
+***
+
+[idena-sdk-js-lite](../README.md) / stripHexPrefix
+
+# Function: stripHexPrefix()
+
+> **stripHexPrefix**(`str`): `string`
+
+Defined in: [utils.ts:12](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/utils.ts#L12)
+
+## Parameters
+
+### str
+
+`string`
+
+## Returns
+
+`string`

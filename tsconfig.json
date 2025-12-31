@@ -16,7 +16,7 @@
     "alwaysStrict": true,
     "exactOptionalPropertyTypes": true,
     "forceConsistentCasingInFileNames": true,
-    "importsNotUsedAsValues": "error",
+    "verbatimModuleSyntax": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
@@ -27,11 +27,11 @@
     "strict": true,
 
     // Type-checking settings.
-    "lib": ["ES2020"],
+    "lib": ["ES2022"],
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
-    "types": ["jest"],
-    "target": "ES2015",
+    "types": ["vitest/globals"],
+    "target": "ES2022",
   },
   "include": ["./src/**/*.ts", "./src/**/*.tsx"]
 }

@@ -1,4 +1,4 @@
-import type { ContractArgument, ContractArgumentFormat } from './types';
+import type { ContractArgument, ContractArgumentFormatValue } from './types';
 export declare class CallContractAttachment {
     private _method;
     private _args;
@@ -10,9 +10,9 @@ export declare class CallContractAttachment {
     get method(): string;
     set args(args: Uint8Array[]);
     get args(): Uint8Array[];
-    getArgs(formats: ContractArgumentFormat[]): ContractArgument[];
+    getArgs(formats: ContractArgumentFormatValue[]): ContractArgument[];
     setArgs(args: ContractArgument[]): this;
     fromBytes(bytes: Uint8Array): this;
-    toBytes(): Uint8Array;
+    toBytes(): Uint8Array<ArrayBuffer>;
 }
 //# sourceMappingURL=callContractAttachment.d.ts.map

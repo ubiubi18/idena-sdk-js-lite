@@ -1,41 +1,33 @@
-[idena-sdk-js](../README.md) / ContractArgument
+[**idena-sdk-js-lite**](../README.md)
+
+***
+
+[idena-sdk-js-lite](../README.md) / ContractArgument
 
 # Interface: ContractArgument
 
-## Table of contents
-
-### Properties
-
-- [format](ContractArgument.md#format)
-- [index](ContractArgument.md#index)
-- [value](ContractArgument.md#value)
+Defined in: [models/transactions/attachments/contracts/types.ts:56](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/types.ts#L56)
 
 ## Properties
 
 ### format
 
-• **format**: [`ContractArgumentFormat`](../enums/ContractArgumentFormat.md)
+> **format**: [`ContractArgumentFormatValue`](../type-aliases/ContractArgumentFormatValue.md)
 
-#### Defined in
+Defined in: [models/transactions/attachments/contracts/types.ts:58](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/types.ts#L58)
 
-[models/transactions/attachments/contracts/types.ts:23](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/transactions/attachments/contracts/types.ts#L23)
-
-___
+***
 
 ### index
 
-• **index**: `number`
+> **index**: `number`
 
-#### Defined in
+Defined in: [models/transactions/attachments/contracts/types.ts:57](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/types.ts#L57)
 
-[models/transactions/attachments/contracts/types.ts:22](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/transactions/attachments/contracts/types.ts#L22)
-
-___
+***
 
 ### value
 
-• **value**: `any`
+> **value**: `any`
 
-#### Defined in
-
-[models/transactions/attachments/contracts/types.ts:24](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/transactions/attachments/contracts/types.ts#L24)
+Defined in: [models/transactions/attachments/contracts/types.ts:59](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/types.ts#L59)

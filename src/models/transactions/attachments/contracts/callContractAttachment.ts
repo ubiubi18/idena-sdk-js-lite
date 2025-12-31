@@ -1,5 +1,9 @@
-import { ProtoCallContractAttachment } from '../../../proto/models';
-import type { ContractArgument, ContractArgumentFormat } from './types';
+import { create, fromBinary, toBinary } from '@bufbuild/protobuf';
+import {
+  type ProtoCallContractAttachment,
+  ProtoCallContractAttachmentSchema,
+} from '../../../proto/models_pb';
+import type { ContractArgument, ContractArgumentFormatValue } from './types';
 import { argumentsFromBytes, argumentsToBytes } from './utils';
 
 export class CallContractAttachment {
@@ -27,7 +31,7 @@ export class CallContractAttachment {
     return this._args;
   }
 
-  public getArgs(formats: ContractArgumentFormat[]): ContractArgument[] {
+  public getArgs(formats: ContractArgumentFormatValue[]): ContractArgument[] {
     return argumentsFromBytes(formats, this._args);
   }
 
@@ -37,7 +41,10 @@ export class CallContractAttachment {
   }
 
   public fromBytes(bytes: Uint8Array) {
-    const protoAttachment = ProtoCallContractAttachment.decode(bytes);
+    const protoAttachment = fromBinary(
+      ProtoCallContractAttachmentSchema,
+      bytes,
+    );
 
     this._method = protoAttachment.method;
     this._args = protoAttachment.args;
@@ -46,10 +53,14 @@ export class CallContractAttachment {
   }
 
   public toBytes() {
-    const attachment = ProtoCallContractAttachment.fromPartial({
-      method: this._method,
-      args: this._args.map((x) => x || new Uint8Array()),
-    });
-    return ProtoCallContractAttachment.encode(attachment).finish();
+    const attachment: ProtoCallContractAttachment = create(
+      ProtoCallContractAttachmentSchema,
+      {
+        method: this._method,
+        args: this._args.map((x) => x || new Uint8Array()),
+      },
+    );
+
+    return toBinary(ProtoCallContractAttachmentSchema, attachment);
   }
 }

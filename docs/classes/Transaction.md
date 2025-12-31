@@ -1,498 +1,461 @@
-[idena-sdk-js](../README.md) / Transaction
+[**idena-sdk-js-lite**](../README.md)
+
+***
+
+[idena-sdk-js-lite](../README.md) / Transaction
 
 # Class: Transaction
 
-## Table of contents
-
-### Constructors
-
-- [constructor](Transaction.md#constructor)
-
-### Properties
-
-- [\_amount](Transaction.md#_amount)
-- [\_epoch](Transaction.md#_epoch)
-- [\_maxFee](Transaction.md#_maxfee)
-- [\_nonce](Transaction.md#_nonce)
-- [\_payload](Transaction.md#_payload)
-- [\_signature](Transaction.md#_signature)
-- [\_tips](Transaction.md#_tips)
-- [\_to](Transaction.md#_to)
-- [\_type](Transaction.md#_type)
-
-### Accessors
-
-- [amount](Transaction.md#amount)
-- [epoch](Transaction.md#epoch)
-- [gas](Transaction.md#gas)
-- [hash](Transaction.md#hash)
-- [maxFee](Transaction.md#maxfee)
-- [nonce](Transaction.md#nonce)
-- [payload](Transaction.md#payload)
-- [sender](Transaction.md#sender)
-- [signature](Transaction.md#signature)
-- [tips](Transaction.md#tips)
-- [to](Transaction.md#to)
-- [type](Transaction.md#type)
-
-### Methods
-
-- [\_createProtoTxData](Transaction.md#_createprototxdata)
-- [fromBytes](Transaction.md#frombytes)
-- [fromHex](Transaction.md#fromhex)
-- [fromJson](Transaction.md#fromjson)
-- [sign](Transaction.md#sign)
-- [toBytes](Transaction.md#tobytes)
-- [toHex](Transaction.md#tohex)
-- [fromBytes](Transaction.md#frombytes-1)
-- [fromHex](Transaction.md#fromhex-1)
+Defined in: [models/transactions/transaction.ts:91](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L91)
 
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new Transaction**(`init?`)
+> **new Transaction**(`init?`): `Transaction`
+
+Defined in: [models/transactions/transaction.ts:103](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L103)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `init?` | `Partial`<{ `amount`: `string` \| `number` \| `BN` \| `Uint8Array` ; `epoch`: `number` ; `maxFee`: `string` \| `number` \| `BN` \| `Uint8Array` ; `nonce`: `number` ; `payload`: `Uint8Array` \| `number`[] ; `tips`: `string` \| `number` \| `BN` \| `Uint8Array` ; `to`: `string` \| `Uint8Array` ; `type`: [`TransactionType`](../enums/TransactionType.md)  }\> |
+##### init?
 
-## Properties
+`Partial`\<\{ `amount`: `string` \| `number` \| `BN` \| `Uint8Array`\<`ArrayBufferLike`\>; `epoch`: `number`; `maxFee`: `string` \| `number` \| `BN` \| `Uint8Array`\<`ArrayBufferLike`\>; `nonce`: `number`; `payload`: `Uint8Array`\<`ArrayBufferLike`\> \| `number`[]; `tips`: `string` \| `number` \| `BN` \| `Uint8Array`\<`ArrayBufferLike`\>; `to`: `string` \| `Uint8Array`\<`ArrayBufferLike`\>; `type`: [`TransactionTypeValue`](../type-aliases/TransactionTypeValue.md); \}\>
 
-### \_amount
+#### Returns
 
-• `Private` **\_amount**: ``null`` \| `BN` = `null`
-
-#### Defined in
-
-[models/transactions/transaction.ts:39](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/transactions/transaction.ts#L39)
-
-___
-
-### \_epoch
-
-• `Private` **\_epoch**: `number` = `0`
-
-#### Defined in
-
-[models/transactions/transaction.ts:36](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/transactions/transaction.ts#L36)
-
-___
-
-### \_maxFee
-
-• `Private` **\_maxFee**: ``null`` \| `BN` = `null`
-
-#### Defined in
-
-[models/transactions/transaction.ts:40](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/transactions/transaction.ts#L40)
-
-___
-
-### \_nonce
-
-• `Private` **\_nonce**: `number` = `0`
-
-#### Defined in
-
-[models/transactions/transaction.ts:35](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/transactions/transaction.ts#L35)
-
-___
-
-### \_payload
-
-• `Private` **\_payload**: ``null`` \| `Uint8Array` = `null`
-
-#### Defined in
-
-[models/transactions/transaction.ts:42](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/transactions/transaction.ts#L42)
-
-___
-
-### \_signature
-
-• `Private` **\_signature**: ``null`` \| `Uint8Array` = `null`
-
-#### Defined in
-
-[models/transactions/transaction.ts:44](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/transactions/transaction.ts#L44)
-
-___
-
-### \_tips
-
-• `Private` **\_tips**: ``null`` \| `BN` = `null`
-
-#### Defined in
-
-[models/transactions/transaction.ts:41](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/transactions/transaction.ts#L41)
-
-___
-
-### \_to
-
-• `Private` **\_to**: ``null`` \| `Uint8Array` = `null`
-
-#### Defined in
-
-[models/transactions/transaction.ts:38](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/transactions/transaction.ts#L38)
-
-___
-
-### \_type
-
-• `Private` **\_type**: `number` = `0`
-
-#### Defined in
-
-[models/transactions/transaction.ts:37](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/transactions/transaction.ts#L37)
+`Transaction`
 
 ## Accessors
 
 ### amount
 
-• `get` **amount**(): ``null`` \| `BN`
+#### Get Signature
 
-#### Returns
+> **get** **amount**(): `BN` \| `null`
 
-``null`` \| `BN`
+Defined in: [models/transactions/transaction.ts:163](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L163)
 
-• `set` **amount**(`amount`): `void`
+##### Returns
 
-#### Parameters
+`BN` \| `null`
 
-| Name | Type |
-| :------ | :------ |
-| `amount` | ``null`` \| `string` \| `number` \| `BN` \| `Uint8Array` |
+#### Set Signature
 
-#### Returns
+> **set** **amount**(`amount`): `void`
+
+Defined in: [models/transactions/transaction.ts:159](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L159)
+
+##### Parameters
+
+###### amount
+
+`string` | `number` | `BN` | `Uint8Array`\<`ArrayBufferLike`\> | `null`
+
+##### Returns
 
 `void`
 
-___
+***
 
 ### epoch
 
-• `get` **epoch**(): `number`
+#### Get Signature
 
-#### Returns
+> **get** **epoch**(): `number`
+
+Defined in: [models/transactions/transaction.ts:137](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L137)
+
+##### Returns
 
 `number`
 
-• `set` **epoch**(`epoch`): `void`
+#### Set Signature
 
-#### Parameters
+> **set** **epoch**(`epoch`): `void`
 
-| Name | Type |
-| :------ | :------ |
-| `epoch` | `number` |
+Defined in: [models/transactions/transaction.ts:133](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L133)
 
-#### Returns
+##### Parameters
+
+###### epoch
+
+`number`
+
+##### Returns
 
 `void`
 
-___
+***
 
 ### gas
 
-• `get` **gas**(): `number`
+#### Get Signature
 
-#### Returns
+> **get** **gas**(): `number`
+
+Defined in: [models/transactions/transaction.ts:214](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L214)
+
+##### Returns
 
 `number`
 
-___
+***
 
 ### hash
 
-• `get` **hash**(): `string`
+#### Get Signature
 
-#### Returns
+> **get** **hash**(): `string`
+
+Defined in: [models/transactions/transaction.ts:195](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L195)
+
+##### Returns
 
 `string`
 
-___
+***
 
 ### maxFee
 
-• `get` **maxFee**(): ``null`` \| `BN`
+#### Get Signature
 
-#### Returns
+> **get** **maxFee**(): `BN` \| `null`
 
-``null`` \| `BN`
+Defined in: [models/transactions/transaction.ts:171](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L171)
 
-• `set` **maxFee**(`maxFee`): `void`
+##### Returns
 
-#### Parameters
+`BN` \| `null`
 
-| Name | Type |
-| :------ | :------ |
-| `maxFee` | ``null`` \| `string` \| `number` \| `BN` \| `Uint8Array` |
+#### Set Signature
 
-#### Returns
+> **set** **maxFee**(`maxFee`): `void`
+
+Defined in: [models/transactions/transaction.ts:167](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L167)
+
+##### Parameters
+
+###### maxFee
+
+`string` | `number` | `BN` | `Uint8Array`\<`ArrayBufferLike`\> | `null`
+
+##### Returns
 
 `void`
 
-___
+***
 
 ### nonce
 
-• `get` **nonce**(): `number`
+#### Get Signature
 
-#### Returns
+> **get** **nonce**(): `number`
+
+Defined in: [models/transactions/transaction.ts:129](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L129)
+
+##### Returns
 
 `number`
 
-• `set` **nonce**(`nonce`): `void`
+#### Set Signature
 
-#### Parameters
+> **set** **nonce**(`nonce`): `void`
 
-| Name | Type |
-| :------ | :------ |
-| `nonce` | `number` |
+Defined in: [models/transactions/transaction.ts:125](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L125)
 
-#### Returns
+##### Parameters
+
+###### nonce
+
+`number`
+
+##### Returns
 
 `void`
 
-___
+***
 
 ### payload
 
-• `get` **payload**(): ``null`` \| `Uint8Array`
+#### Get Signature
 
-#### Returns
+> **get** **payload**(): `Uint8Array`\<`ArrayBufferLike`\> \| `null`
 
-``null`` \| `Uint8Array`
+Defined in: [models/transactions/transaction.ts:187](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L187)
 
-• `set` **payload**(`payload`): `void`
+##### Returns
 
-#### Parameters
+`Uint8Array`\<`ArrayBufferLike`\> \| `null`
 
-| Name | Type |
-| :------ | :------ |
-| `payload` | ``null`` \| `Uint8Array` |
+#### Set Signature
 
-#### Returns
+> **set** **payload**(`payload`): `void`
+
+Defined in: [models/transactions/transaction.ts:183](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L183)
+
+##### Parameters
+
+###### payload
+
+`Uint8Array`\<`ArrayBufferLike`\> | `null`
+
+##### Returns
 
 `void`
 
-___
+***
 
 ### sender
 
-• `get` **sender**(): ``null`` \| `string`
+#### Get Signature
 
-#### Returns
+> **get** **sender**(): `string` \| `null`
 
-``null`` \| `string`
+Defined in: [models/transactions/transaction.ts:199](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L199)
 
-___
+##### Returns
+
+`string` \| `null`
+
+***
 
 ### signature
 
-• `get` **signature**(): ``null`` \| `Uint8Array`
+#### Get Signature
 
-#### Returns
+> **get** **signature**(): `Uint8Array`\<`ArrayBufferLike`\> \| `null`
 
-``null`` \| `Uint8Array`
+Defined in: [models/transactions/transaction.ts:191](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L191)
 
-___
+##### Returns
+
+`Uint8Array`\<`ArrayBufferLike`\> \| `null`
+
+***
 
 ### tips
 
-• `get` **tips**(): ``null`` \| `BN`
+#### Get Signature
 
-#### Returns
+> **get** **tips**(): `BN` \| `null`
 
-``null`` \| `BN`
+Defined in: [models/transactions/transaction.ts:179](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L179)
 
-• `set` **tips**(`tips`): `void`
+##### Returns
 
-#### Parameters
+`BN` \| `null`
 
-| Name | Type |
-| :------ | :------ |
-| `tips` | ``null`` \| `string` \| `number` \| `BN` \| `Uint8Array` |
+#### Set Signature
 
-#### Returns
+> **set** **tips**(`tips`): `void`
+
+Defined in: [models/transactions/transaction.ts:175](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L175)
+
+##### Parameters
+
+###### tips
+
+`string` | `number` | `BN` | `Uint8Array`\<`ArrayBufferLike`\> | `null`
+
+##### Returns
 
 `void`
 
-___
+***
 
 ### to
 
-• `get` **to**(): ``null`` \| `string`
+#### Get Signature
 
-#### Returns
+> **get** **to**(): `string` \| `null`
 
-``null`` \| `string`
+Defined in: [models/transactions/transaction.ts:155](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L155)
 
-• `set` **to**(`to`): `void`
+##### Returns
 
-#### Parameters
+`string` \| `null`
 
-| Name | Type |
-| :------ | :------ |
-| `to` | ``null`` \| `string` \| `Uint8Array` |
+#### Set Signature
 
-#### Returns
+> **set** **to**(`to`): `void`
+
+Defined in: [models/transactions/transaction.ts:149](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L149)
+
+##### Parameters
+
+###### to
+
+`string` | `Uint8Array`\<`ArrayBufferLike`\> | `null`
+
+##### Returns
 
 `void`
 
-___
+***
 
 ### type
 
-• `get` **type**(): `number`
+#### Get Signature
 
-#### Returns
+> **get** **type**(): `number`
+
+Defined in: [models/transactions/transaction.ts:145](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L145)
+
+##### Returns
 
 `number`
 
-• `set` **type**(`type`): `void`
+#### Set Signature
 
-#### Parameters
+> **set** **type**(`type`): `void`
 
-| Name | Type |
-| :------ | :------ |
-| `type` | [`TransactionType`](../enums/TransactionType.md) |
+Defined in: [models/transactions/transaction.ts:141](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L141)
 
-#### Returns
+##### Parameters
+
+###### type
+
+[`TransactionTypeValue`](../type-aliases/TransactionTypeValue.md)
+
+##### Returns
 
 `void`
 
 ## Methods
 
-### \_createProtoTxData
+### fromBytes()
 
-▸ `Private` **_createProtoTxData**(): [`ProtoTransaction_Data`](../modules/internal_.md#prototransaction_data)
+> **fromBytes**(`bytes`): `Transaction`
 
-#### Returns
-
-[`ProtoTransaction_Data`](../modules/internal_.md#prototransaction_data)
-
-___
-
-### fromBytes
-
-▸ **fromBytes**(`bytes`): [`Transaction`](Transaction.md)
+Defined in: [models/transactions/transaction.ts:249](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L249)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `bytes` | `Uint8Array` |
+##### bytes
+
+`Uint8Array`
 
 #### Returns
 
-[`Transaction`](Transaction.md)
+`Transaction`
 
-___
+***
 
-### fromHex
+### fromHex()
 
-▸ **fromHex**(`hex`): [`Transaction`](Transaction.md)
+> **fromHex**(`hex`): `Transaction`
+
+Defined in: [models/transactions/transaction.ts:245](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L245)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `hex` | `string` |
+##### hex
+
+`string`
 
 #### Returns
 
-[`Transaction`](Transaction.md)
+`Transaction`
 
-___
+***
 
-### fromJson
+### fromJson()
 
-▸ **fromJson**(`jsonTx`): [`Transaction`](Transaction.md)
+> **fromJson**(`jsonTx`): `Transaction`
+
+Defined in: [models/transactions/transaction.ts:269](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L269)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `jsonTx` | [`JsonTransaction`](JsonTransaction.md) |
+##### jsonTx
+
+[`JsonTransaction`](JsonTransaction.md)
 
 #### Returns
 
-[`Transaction`](Transaction.md)
+`Transaction`
 
-___
+***
 
-### sign
+### sign()
 
-▸ **sign**(`key`): [`Transaction`](Transaction.md)
+> **sign**(`key`): `Transaction`
+
+Defined in: [models/transactions/transaction.ts:301](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L301)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `key` | `string` \| `Uint8Array` \| `number`[] |
+##### key
+
+`string` | `Uint8Array`\<`ArrayBufferLike`\> | `number`[]
 
 #### Returns
 
-[`Transaction`](Transaction.md)
+`Transaction`
 
-___
+***
 
-### toBytes
+### toBytes()
 
-▸ **toBytes**(): `Uint8Array`
+> **toBytes**(): `Uint8Array`
+
+Defined in: [models/transactions/transaction.ts:292](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L292)
 
 #### Returns
 
 `Uint8Array`
 
-___
+***
 
-### toHex
+### toHex()
 
-▸ **toHex**(`withPrefix?`): `string`
+> **toHex**(`withPrefix`): `string`
+
+Defined in: [models/transactions/transaction.ts:310](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L310)
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `withPrefix` | `boolean` | `true` |
+##### withPrefix
+
+`boolean` = `true`
 
 #### Returns
 
 `string`
 
-___
+***
 
-### fromBytes
+### fromBytes()
 
-▸ `Static` **fromBytes**(`bytes`): [`Transaction`](Transaction.md)
+> `static` **fromBytes**(`bytes`): `Transaction`
 
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `bytes` | `Uint8Array` |
-
-#### Returns
-
-[`Transaction`](Transaction.md)
-
-___
-
-### fromHex
-
-▸ `Static` **fromHex**(`hex`): [`Transaction`](Transaction.md)
+Defined in: [models/transactions/transaction.ts:241](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L241)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `hex` | `string` |
+##### bytes
+
+`Uint8Array`
 
 #### Returns
 
-[`Transaction`](Transaction.md)
+`Transaction`
+
+***
+
+### fromHex()
+
+> `static` **fromHex**(`hex`): `Transaction`
+
+Defined in: [models/transactions/transaction.ts:237](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L237)
+
+#### Parameters
+
+##### hex
+
+`string`
+
+#### Returns
+
+`Transaction`

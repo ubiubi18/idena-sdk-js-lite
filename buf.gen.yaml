@@ -1,0 +1,7 @@
+version: v2
+plugins:
+  - remote: buf.build/bufbuild/es:v2.10.2
+    out: src/models/proto
+    opt: target=ts
+inputs:
+  - directory: src/models/proto/models.proto

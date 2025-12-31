@@ -1,179 +1,179 @@
-[idena-sdk-js](../README.md) / JsonTransaction
+[**idena-sdk-js-lite**](../README.md)
+
+***
+
+[idena-sdk-js-lite](../README.md) / JsonTransaction
 
 # Class: JsonTransaction
 
-## Table of contents
-
-### Constructors
-
-- [constructor](JsonTransaction.md#constructor)
-
-### Properties
-
-- [amount](JsonTransaction.md#amount)
-- [blockHash](JsonTransaction.md#blockhash)
-- [epoch](JsonTransaction.md#epoch)
-- [from](JsonTransaction.md#from)
-- [hash](JsonTransaction.md#hash)
-- [maxFee](JsonTransaction.md#maxfee)
-- [nonce](JsonTransaction.md#nonce)
-- [payload](JsonTransaction.md#payload)
-- [timestamp](JsonTransaction.md#timestamp)
-- [tips](JsonTransaction.md#tips)
-- [to](JsonTransaction.md#to)
-- [type](JsonTransaction.md#type)
-- [usedFee](JsonTransaction.md#usedfee)
+Defined in: [models/json/index.ts:1](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L1)
 
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new JsonTransaction**(`hash`, `type`, `from`, `to`, `amount`, `tips`, `maxFee`, `nonce`, `epoch`, `payload`, `blockHash`, `usedFee`, `timestamp`)
+> **new JsonTransaction**(`hash`, `type`, `from`, `to`, `amount`, `tips`, `maxFee`, `nonce`, `epoch`, `payload`, `blockHash`, `usedFee`, `timestamp`): `JsonTransaction`
+
+Defined in: [models/json/index.ts:16](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L16)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `hash` | `string` |
-| `type` | `string` |
-| `from` | `string` |
-| `to` | `string` |
-| `amount` | `string` |
-| `tips` | `string` |
-| `maxFee` | `string` |
-| `nonce` | `number` |
-| `epoch` | `number` |
-| `payload` | `string` |
-| `blockHash` | `string` |
-| `usedFee` | `string` |
-| `timestamp` | `number` |
+##### hash
+
+`string`
+
+##### type
+
+`string`
+
+##### from
+
+`string`
+
+##### to
+
+`string`
+
+##### amount
+
+`string`
+
+##### tips
+
+`string`
+
+##### maxFee
+
+`string`
+
+##### nonce
+
+`number`
+
+##### epoch
+
+`number`
+
+##### payload
+
+`string`
+
+##### blockHash
+
+`string`
+
+##### usedFee
+
+`string`
+
+##### timestamp
+
+`number`
+
+#### Returns
+
+`JsonTransaction`
 
 ## Properties
 
 ### amount
 
-• **amount**: `string`
+> **amount**: `string`
 
-#### Defined in
+Defined in: [models/json/index.ts:6](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L6)
 
-[models/json/index.ts:23](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/json/index.ts#L23)
-
-___
+***
 
 ### blockHash
 
-• **blockHash**: `string`
+> **blockHash**: `string`
 
-#### Defined in
+Defined in: [models/json/index.ts:12](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L12)
 
-[models/json/index.ts:29](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/json/index.ts#L29)
-
-___
+***
 
 ### epoch
 
-• **epoch**: `number`
+> **epoch**: `number`
 
-#### Defined in
+Defined in: [models/json/index.ts:10](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L10)
 
-[models/json/index.ts:27](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/json/index.ts#L27)
-
-___
+***
 
 ### from
 
-• **from**: `string`
+> **from**: `string`
 
-#### Defined in
+Defined in: [models/json/index.ts:4](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L4)
 
-[models/json/index.ts:21](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/json/index.ts#L21)
-
-___
+***
 
 ### hash
 
-• **hash**: `string`
+> **hash**: `string`
 
-#### Defined in
+Defined in: [models/json/index.ts:2](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L2)
 
-[models/json/index.ts:19](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/json/index.ts#L19)
-
-___
+***
 
 ### maxFee
 
-• **maxFee**: `string`
+> **maxFee**: `string`
 
-#### Defined in
+Defined in: [models/json/index.ts:8](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L8)
 
-[models/json/index.ts:25](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/json/index.ts#L25)
-
-___
+***
 
 ### nonce
 
-• **nonce**: `number`
+> **nonce**: `number`
 
-#### Defined in
+Defined in: [models/json/index.ts:9](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L9)
 
-[models/json/index.ts:26](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/json/index.ts#L26)
-
-___
+***
 
 ### payload
 
-• **payload**: `string`
+> **payload**: `string`
 
-#### Defined in
+Defined in: [models/json/index.ts:11](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L11)
 
-[models/json/index.ts:28](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/json/index.ts#L28)
-
-___
+***
 
 ### timestamp
 
-• **timestamp**: `number`
+> **timestamp**: `number`
 
-#### Defined in
+Defined in: [models/json/index.ts:14](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L14)
 
-[models/json/index.ts:31](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/json/index.ts#L31)
-
-___
+***
 
 ### tips
 
-• **tips**: `string`
+> **tips**: `string`
 
-#### Defined in
+Defined in: [models/json/index.ts:7](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L7)
 
-[models/json/index.ts:24](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/json/index.ts#L24)
-
-___
+***
 
 ### to
 
-• **to**: `string`
+> **to**: `string`
 
-#### Defined in
+Defined in: [models/json/index.ts:5](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L5)
 
-[models/json/index.ts:22](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/json/index.ts#L22)
-
-___
+***
 
 ### type
 
-• **type**: `string`
+> **type**: `string`
 
-#### Defined in
+Defined in: [models/json/index.ts:3](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L3)
 
-[models/json/index.ts:20](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/json/index.ts#L20)
-
-___
+***
 
 ### usedFee
 
-• **usedFee**: `string`
+> **usedFee**: `string`
 
-#### Defined in
-
-[models/json/index.ts:30](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/json/index.ts#L30)
+Defined in: [models/json/index.ts:13](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L13)

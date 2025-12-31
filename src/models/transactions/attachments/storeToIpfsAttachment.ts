@@ -1,11 +1,17 @@
-import { ProtoStoreToIpfsAttachment } from '../../proto/models';
-import type { EmbeddedContractType } from './contracts/types';
+import { create, fromBinary, toBinary } from '@bufbuild/protobuf';
+import {
+  ProtoStoreToIpfsAttachmentSchema,
+  type ProtoStoreToIpfsAttachment,
+} from '../../proto/models_pb';
+import type { EmbeddedContractTypeValue } from './contracts/types';
 
 export class StoreToIpfsAttachment {
   private _size: number;
   private _cid: Uint8Array;
 
-  constructor(init?: Partial<{ size: EmbeddedContractType; cid: Uint8Array }>) {
+  constructor(
+    init?: Partial<{ size: EmbeddedContractTypeValue; cid: Uint8Array }>,
+  ) {
     this._size = init?.size || 0;
     this._cid = init?.cid || new Uint8Array();
   }
@@ -27,7 +33,7 @@ export class StoreToIpfsAttachment {
   }
 
   public fromBytes(bytes: Uint8Array) {
-    const protoAttachment = ProtoStoreToIpfsAttachment.decode(bytes);
+    const protoAttachment = fromBinary(ProtoStoreToIpfsAttachmentSchema, bytes);
 
     this._cid = protoAttachment.cid;
     this._size = protoAttachment.size;
@@ -36,10 +42,14 @@ export class StoreToIpfsAttachment {
   }
 
   public toBytes() {
-    const attachment = ProtoStoreToIpfsAttachment.fromPartial({
-      cid: this._cid,
-      size: this._size,
-    });
-    return ProtoStoreToIpfsAttachment.encode(attachment).finish();
+    const attachment: ProtoStoreToIpfsAttachment = create(
+      ProtoStoreToIpfsAttachmentSchema,
+      {
+        cid: this._cid,
+        size: this._size,
+      },
+    );
+
+    return toBinary(ProtoStoreToIpfsAttachmentSchema, attachment);
   }
 }

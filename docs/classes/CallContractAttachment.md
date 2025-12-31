@@ -1,160 +1,153 @@
-[idena-sdk-js](../README.md) / CallContractAttachment
+[**idena-sdk-js-lite**](../README.md)
+
+***
+
+[idena-sdk-js-lite](../README.md) / CallContractAttachment
 
 # Class: CallContractAttachment
 
-## Table of contents
-
-### Constructors
-
-- [constructor](CallContractAttachment.md#constructor)
-
-### Properties
-
-- [\_args](CallContractAttachment.md#_args)
-- [\_method](CallContractAttachment.md#_method)
-
-### Accessors
-
-- [args](CallContractAttachment.md#args)
-- [method](CallContractAttachment.md#method)
-
-### Methods
-
-- [fromBytes](CallContractAttachment.md#frombytes)
-- [getArgs](CallContractAttachment.md#getargs)
-- [setArgs](CallContractAttachment.md#setargs)
-- [toBytes](CallContractAttachment.md#tobytes)
+Defined in: [models/transactions/attachments/contracts/callContractAttachment.ts:9](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/callContractAttachment.ts#L9)
 
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new CallContractAttachment**(`init?`)
+> **new CallContractAttachment**(`init?`): `CallContractAttachment`
+
+Defined in: [models/transactions/attachments/contracts/callContractAttachment.ts:13](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/callContractAttachment.ts#L13)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `init?` | `Partial`<{ `args`: `Uint8Array`[] ; `method`: `string`  }\> |
+##### init?
 
-## Properties
+`Partial`\<\{ `args`: `Uint8Array`\<`ArrayBufferLike`\>[]; `method`: `string`; \}\>
 
-### \_args
+#### Returns
 
-• `Private` **\_args**: `Uint8Array`[]
-
-#### Defined in
-
-[models/transactions/attachments/contracts/callContractAttachment.ts:7](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/transactions/attachments/contracts/callContractAttachment.ts#L7)
-
-___
-
-### \_method
-
-• `Private` **\_method**: `string`
-
-#### Defined in
-
-[models/transactions/attachments/contracts/callContractAttachment.ts:6](https://github.com/idena-network/idena-sdk-js/blob/master/src/models/transactions/attachments/contracts/callContractAttachment.ts#L6)
+`CallContractAttachment`
 
 ## Accessors
 
 ### args
 
-• `get` **args**(): `Uint8Array`[]
+#### Get Signature
 
-#### Returns
+> **get** **args**(): `Uint8Array`\<`ArrayBufferLike`\>[]
 
-`Uint8Array`[]
+Defined in: [models/transactions/attachments/contracts/callContractAttachment.ts:30](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/callContractAttachment.ts#L30)
 
-• `set` **args**(`args`): `void`
+##### Returns
 
-#### Parameters
+`Uint8Array`\<`ArrayBufferLike`\>[]
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Uint8Array`[] |
+#### Set Signature
 
-#### Returns
+> **set** **args**(`args`): `void`
+
+Defined in: [models/transactions/attachments/contracts/callContractAttachment.ts:26](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/callContractAttachment.ts#L26)
+
+##### Parameters
+
+###### args
+
+`Uint8Array`\<`ArrayBufferLike`\>[]
+
+##### Returns
 
 `void`
 
-___
+***
 
 ### method
 
-• `get` **method**(): `string`
+#### Get Signature
 
-#### Returns
+> **get** **method**(): `string`
+
+Defined in: [models/transactions/attachments/contracts/callContractAttachment.ts:22](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/callContractAttachment.ts#L22)
+
+##### Returns
 
 `string`
 
-• `set` **method**(`method`): `void`
+#### Set Signature
 
-#### Parameters
+> **set** **method**(`method`): `void`
 
-| Name | Type |
-| :------ | :------ |
-| `method` | `string` |
+Defined in: [models/transactions/attachments/contracts/callContractAttachment.ts:18](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/callContractAttachment.ts#L18)
 
-#### Returns
+##### Parameters
+
+###### method
+
+`string`
+
+##### Returns
 
 `void`
 
 ## Methods
 
-### fromBytes
+### fromBytes()
 
-▸ **fromBytes**(`bytes`): [`CallContractAttachment`](CallContractAttachment.md)
+> **fromBytes**(`bytes`): `CallContractAttachment`
+
+Defined in: [models/transactions/attachments/contracts/callContractAttachment.ts:43](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/callContractAttachment.ts#L43)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `bytes` | `Uint8Array` |
+##### bytes
+
+`Uint8Array`
 
 #### Returns
 
-[`CallContractAttachment`](CallContractAttachment.md)
+`CallContractAttachment`
 
-___
+***
 
-### getArgs
+### getArgs()
 
-▸ **getArgs**(`formats`): [`ContractArgument`](../interfaces/ContractArgument.md)[]
+> **getArgs**(`formats`): [`ContractArgument`](../interfaces/ContractArgument.md)[]
+
+Defined in: [models/transactions/attachments/contracts/callContractAttachment.ts:34](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/callContractAttachment.ts#L34)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `formats` | [`ContractArgumentFormat`](../enums/ContractArgumentFormat.md)[] |
+##### formats
+
+[`ContractArgumentFormatValue`](../type-aliases/ContractArgumentFormatValue.md)[]
 
 #### Returns
 
 [`ContractArgument`](../interfaces/ContractArgument.md)[]
 
-___
+***
 
-### setArgs
+### setArgs()
 
-▸ **setArgs**(`args`): [`CallContractAttachment`](CallContractAttachment.md)
+> **setArgs**(`args`): `CallContractAttachment`
+
+Defined in: [models/transactions/attachments/contracts/callContractAttachment.ts:38](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/callContractAttachment.ts#L38)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`ContractArgument`](../interfaces/ContractArgument.md)[] |
+##### args
+
+[`ContractArgument`](../interfaces/ContractArgument.md)[]
 
 #### Returns
 
-[`CallContractAttachment`](CallContractAttachment.md)
+`CallContractAttachment`
 
-___
+***
 
-### toBytes
+### toBytes()
 
-▸ **toBytes**(): `Uint8Array`
+> **toBytes**(): `Uint8Array`\<`ArrayBuffer`\>
+
+Defined in: [models/transactions/attachments/contracts/callContractAttachment.ts:55](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/callContractAttachment.ts#L55)
 
 #### Returns
 
-`Uint8Array`
+`Uint8Array`\<`ArrayBuffer`\>
