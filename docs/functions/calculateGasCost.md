@@ -14,7 +14,7 @@ Defined in: [utils.ts:54](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/b
 
 ### feePerGas
 
-`string` | `BN`
+`string` \| `BN`
 
 ### gas
 

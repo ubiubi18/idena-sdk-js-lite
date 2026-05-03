@@ -62,7 +62,7 @@ from field: uint32 version = 6;
 
 ### votingParams?
 
-> `optional` **votingParams**: [`ProtoAdVotingParams`](ProtoAdVotingParams.md)
+> `optional` **votingParams?**: [`ProtoAdVotingParams`](ProtoAdVotingParams.md)
 
 #### Generated
 

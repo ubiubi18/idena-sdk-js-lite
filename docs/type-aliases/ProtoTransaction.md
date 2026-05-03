@@ -14,7 +14,7 @@ Defined in: [models/proto/models\_pb.ts:20](https://github.com/N3CR0M4NC3R-dev/i
 
 ### data?
 
-> `optional` **data**: [`ProtoTransaction_Data`](ProtoTransaction_Data.md)
+> `optional` **data?**: [`ProtoTransaction_Data`](ProtoTransaction_Data.md)
 
 #### Generated
 

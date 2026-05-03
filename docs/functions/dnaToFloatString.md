@@ -14,7 +14,7 @@ Defined in: [utils.ts:49](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/b
 
 ### value
 
-`string` | `BN`
+`string` \| `BN`
 
 ## Returns
 

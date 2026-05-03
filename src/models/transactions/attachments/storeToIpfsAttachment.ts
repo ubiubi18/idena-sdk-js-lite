@@ -3,15 +3,12 @@ import {
   ProtoStoreToIpfsAttachmentSchema,
   type ProtoStoreToIpfsAttachment,
 } from '../../proto/models_pb';
-import type { EmbeddedContractTypeValue } from './contracts/types';
 
 export class StoreToIpfsAttachment {
   private _size: number;
   private _cid: Uint8Array;
 
-  constructor(
-    init?: Partial<{ size: EmbeddedContractTypeValue; cid: Uint8Array }>,
-  ) {
+  constructor(init?: Partial<{ size: number; cid: Uint8Array }>) {
     this._size = init?.size || 0;
     this._cid = init?.cid || new Uint8Array();
   }

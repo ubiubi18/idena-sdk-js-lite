@@ -90,6 +90,7 @@ const options = [{
     ],
     plugins: [
       typescript2({
+        include: ["src/**/*.ts", "src/**/*.tsx"],
         clean: true,
         useTsconfigDeclarationDir: true,
         tsconfig: './tsconfig.bundle.json',

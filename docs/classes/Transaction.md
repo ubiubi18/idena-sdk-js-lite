@@ -50,7 +50,7 @@ Defined in: [models/transactions/transaction.ts:157](https://github.com/N3CR0M4N
 
 ###### amount
 
-`string` | `number` | `BN` | `Uint8Array`\<`ArrayBufferLike`\> | `null`
+`string` \| `number` \| `BN` \| `Uint8Array`\<`ArrayBufferLike`\> \| `null`
 
 ##### Returns
 
@@ -138,7 +138,7 @@ Defined in: [models/transactions/transaction.ts:165](https://github.com/N3CR0M4N
 
 ###### maxFee
 
-`string` | `number` | `BN` | `Uint8Array`\<`ArrayBufferLike`\> | `null`
+`string` \| `number` \| `BN` \| `Uint8Array`\<`ArrayBufferLike`\> \| `null`
 
 ##### Returns
 
@@ -198,7 +198,7 @@ Defined in: [models/transactions/transaction.ts:181](https://github.com/N3CR0M4N
 
 ###### payload
 
-`Uint8Array`\<`ArrayBufferLike`\> | `null`
+`Uint8Array`\<`ArrayBufferLike`\> \| `null`
 
 ##### Returns
 
@@ -256,7 +256,7 @@ Defined in: [models/transactions/transaction.ts:173](https://github.com/N3CR0M4N
 
 ###### tips
 
-`string` | `number` | `BN` | `Uint8Array`\<`ArrayBufferLike`\> | `null`
+`string` \| `number` \| `BN` \| `Uint8Array`\<`ArrayBufferLike`\> \| `null`
 
 ##### Returns
 
@@ -286,7 +286,7 @@ Defined in: [models/transactions/transaction.ts:147](https://github.com/N3CR0M4N
 
 ###### to
 
-`string` | `Uint8Array`\<`ArrayBufferLike`\> | `null`
+`string` \| `Uint8Array`\<`ArrayBufferLike`\> \| `null`
 
 ##### Returns
 
@@ -388,7 +388,7 @@ Defined in: [models/transactions/transaction.ts:299](https://github.com/N3CR0M4N
 
 ##### key
 
-`string` | `Uint8Array`\<`ArrayBufferLike`\> | `number`[]
+`string` \| `Uint8Array`\<`ArrayBufferLike`\> \| `number`[]
 
 #### Returns
 
@@ -410,13 +410,13 @@ Defined in: [models/transactions/transaction.ts:290](https://github.com/N3CR0M4N
 
 ### toHex()
 
-> **toHex**(`withPrefix`): `string`
+> **toHex**(`withPrefix?`): `string`
 
 Defined in: [models/transactions/transaction.ts:308](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L308)
 
 #### Parameters
 
-##### withPrefix
+##### withPrefix?
 
 `boolean` = `true`
 

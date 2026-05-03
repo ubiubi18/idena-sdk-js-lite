@@ -6,7 +6,7 @@
 
 # Function: privateKeyToAddress()
 
-> **privateKeyToAddress**(`key`, `withPrefix`): `string`
+> **privateKeyToAddress**(`key`, `withPrefix?`): `string`
 
 Defined in: [crypto.ts:27](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/crypto.ts#L27)
 
@@ -14,9 +14,9 @@ Defined in: [crypto.ts:27](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/
 
 ### key
 
-`string` | `Uint8Array`\<`ArrayBufferLike`\> | `number`[]
+`string` \| `Uint8Array`\<`ArrayBufferLike`\> \| `number`[]
 
-### withPrefix
+### withPrefix?
 
 `boolean` = `true`
 

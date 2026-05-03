@@ -157,6 +157,7 @@ export function argumentToBytes(data: ContractArgument): Uint8Array {
       `cannot parse ${data.format} at index ${data.index}: ${
         (e as Error)?.message
       }`,
+      { cause: e },
     );
   }
 }

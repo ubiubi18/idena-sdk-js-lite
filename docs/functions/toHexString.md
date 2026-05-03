@@ -6,7 +6,7 @@
 
 # Function: toHexString()
 
-> **toHexString**(`byteArray`, `withPrefix`): `string`
+> **toHexString**(`byteArray`, `withPrefix?`): `string`
 
 Defined in: [utils.ts:32](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/utils.ts#L32)
 
@@ -14,9 +14,9 @@ Defined in: [utils.ts:32](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/b
 
 ### byteArray
 
-`Uint8Array`\<`ArrayBufferLike`\> | `number`[]
+`Uint8Array`\<`ArrayBufferLike`\> \| `number`[]
 
-### withPrefix
+### withPrefix?
 
 `boolean` = `true`
 

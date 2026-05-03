@@ -14,11 +14,11 @@ Defined in: [crypto.ts:56](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/
 
 ### data
 
-`Uint8Array`\<`ArrayBufferLike`\> | `number`[]
+`Uint8Array`\<`ArrayBufferLike`\> \| `number`[]
 
 ### key
 
-`string` | `Uint8Array`\<`ArrayBufferLike`\> | `number`[]
+`string` \| `Uint8Array`\<`ArrayBufferLike`\> \| `number`[]
 
 ## Returns
 

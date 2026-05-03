@@ -6,7 +6,7 @@
 
 # Function: publicKeyToAddress()
 
-> **publicKeyToAddress**(`publicKey`, `withPrefix`): `string`
+> **publicKeyToAddress**(`publicKey`, `withPrefix?`): `string`
 
 Defined in: [crypto.ts:17](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/crypto.ts#L17)
 
@@ -14,9 +14,9 @@ Defined in: [crypto.ts:17](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/
 
 ### publicKey
 
-`string` | `Uint8Array`\<`ArrayBufferLike`\> | `number`[]
+`string` \| `Uint8Array`\<`ArrayBufferLike`\> \| `number`[]
 
-### withPrefix
+### withPrefix?
 
 `boolean` = `true`
 

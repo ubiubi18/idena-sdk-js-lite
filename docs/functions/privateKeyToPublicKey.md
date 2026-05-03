@@ -6,7 +6,7 @@
 
 # Function: privateKeyToPublicKey()
 
-> **privateKeyToPublicKey**(`key`, `withPrefix`): `string`
+> **privateKeyToPublicKey**(`key`, `withPrefix?`): `string`
 
 Defined in: [crypto.ts:9](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/crypto.ts#L9)
 
@@ -14,9 +14,9 @@ Defined in: [crypto.ts:9](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/b
 
 ### key
 
-`string` | `Uint8Array`\<`ArrayBufferLike`\> | `number`[]
+`string` \| `Uint8Array`\<`ArrayBufferLike`\> \| `number`[]
 
-### withPrefix
+### withPrefix?
 
 `boolean` = `false`
 

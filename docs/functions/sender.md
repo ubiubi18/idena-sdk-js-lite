@@ -6,7 +6,7 @@
 
 # Function: sender()
 
-> **sender**(`data`, `signature`, `withPrefix`): `string`
+> **sender**(`data`, `signature`, `withPrefix?`): `string`
 
 Defined in: [crypto.ts:40](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/crypto.ts#L40)
 
@@ -14,13 +14,13 @@ Defined in: [crypto.ts:40](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/
 
 ### data
 
-`Uint8Array`\<`ArrayBufferLike`\> | `number`[]
+`Uint8Array`\<`ArrayBufferLike`\> \| `number`[]
 
 ### signature
 
-`Uint8Array`\<`ArrayBufferLike`\> | `number`[]
+`Uint8Array`\<`ArrayBufferLike`\> \| `number`[]
 
-### withPrefix
+### withPrefix?
 
 `boolean` = `true`
 

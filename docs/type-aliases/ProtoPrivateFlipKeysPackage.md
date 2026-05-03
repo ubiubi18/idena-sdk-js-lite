@@ -14,7 +14,7 @@ Defined in: [models/proto/models\_pb.ts:119](https://github.com/N3CR0M4NC3R-dev/
 
 ### data?
 
-> `optional` **data**: [`ProtoPrivateFlipKeysPackage_Data`](ProtoPrivateFlipKeysPackage_Data.md)
+> `optional` **data?**: [`ProtoPrivateFlipKeysPackage_Data`](ProtoPrivateFlipKeysPackage_Data.md)
 
 #### Generated
 

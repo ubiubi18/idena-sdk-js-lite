@@ -8,7 +8,7 @@
 
 > **argumentsToBytes**(`args`): `Uint8Array`\<`ArrayBufferLike`\>[]
 
-Defined in: [models/transactions/attachments/contracts/utils.ts:164](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/utils.ts#L164)
+Defined in: [models/transactions/attachments/contracts/utils.ts:165](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/utils.ts#L165)
 
 ## Parameters
 

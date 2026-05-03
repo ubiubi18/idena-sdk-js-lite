@@ -1,9 +1,8 @@
-import type { EmbeddedContractTypeValue } from './contracts/types';
 export declare class StoreToIpfsAttachment {
     private _size;
     private _cid;
     constructor(init?: Partial<{
-        size: EmbeddedContractTypeValue;
+        size: number;
         cid: Uint8Array;
     }>);
     set size(size: number);

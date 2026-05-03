@@ -8,6 +8,7 @@
 
 - [CallContractAttachment](classes/CallContractAttachment.md)
 - [JsonTransaction](classes/JsonTransaction.md)
+- [StoreToIpfsAttachment](classes/StoreToIpfsAttachment.md)
 - [Transaction](classes/Transaction.md)
 
 ## Interfaces
