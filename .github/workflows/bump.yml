@@ -7,32 +7,31 @@ on:
         description: 'Semver type of new version (major / minor / patch)'
         required: true
 
+permissions:
+  contents: write
+
 jobs:
   bump-version:
     name: Bump version
     runs-on: ubuntu-latest
     steps:
       - name: Check out source
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
         with:
-          persist-credentials: false
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v6
         with:
-          node-version: '16'
+          node-version: 24.15.0
           cache: 'npm'
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: npm ci
 
       - name: Setup Git
         run: |
-          git config --local user.name 'ridenaio'
-          git config --local user.email 'r@idena.io'
-
-      - name: Install packages
-        run: npm ci
+          git config --local user.name 'github-actions[bot]'
+          git config --local user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
       - name: Update docs
         run: npm run update-docs
@@ -41,7 +40,4 @@ jobs:
         run: npm version ${{ github.event.inputs.version }}
 
       - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
+        run: git push --follow-tags origin HEAD:${{ github.ref_name }}
