@@ -35,9 +35,11 @@ const globalsOutput = {
   globals: {
   '@bufbuild/protobuf': 'protobuf',
   '@bufbuild/protobuf/codegenv2': 'codegenv2',
+  '@noble/hashes/hmac': 'nobleHashesHmac',
+  '@noble/hashes/sha256': 'nobleHashesSha256',
+  '@noble/secp256k1': 'nobleSecp256k1',
   'bn.js': 'BN',
   'decimal.js': 'Decimal',
-  'secp256k1': 'secp256k1',
   'js-sha3': 'sha3',
   }
 }
@@ -51,7 +53,9 @@ const options = [{
       'js-sha3',
       'bn.js',
       'decimal.js',
-      'secp256k1',
+      '@noble/hashes/hmac',
+      '@noble/hashes/sha256',
+      '@noble/secp256k1',
       '@bufbuild/protobuf',
       '@bufbuild/protobuf/codegenv2',
     ],

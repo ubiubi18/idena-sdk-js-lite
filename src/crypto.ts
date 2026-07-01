@@ -1,6 +1,11 @@
 import sha3 from 'js-sha3';
+import * as secp256k1 from '@noble/secp256k1';
+import { hmac } from '@noble/hashes/hmac';
+import { sha256 } from '@noble/hashes/sha256';
 import { hexToUint8Array, toHexString } from './utils';
-import secp256k1 from 'secp256k1';
+
+secp256k1.etc.hmacSha256Sync = (key, ...messages) =>
+  hmac(sha256, key, secp256k1.etc.concatBytes(...messages));
 
 function getKeyArray(key: Uint8Array | number[] | string): Uint8Array {
   return typeof key === 'string' ? hexToUint8Array(key) : new Uint8Array(key);
@@ -10,7 +15,7 @@ export function privateKeyToPublicKey(
   key: Uint8Array | number[] | string,
   withPrefix = false,
 ) {
-  const pubKey = secp256k1.publicKeyCreate(getKeyArray(key), false);
+  const pubKey = secp256k1.getPublicKey(getKeyArray(key), false);
   return toHexString(pubKey, withPrefix);
 }
 
@@ -32,7 +37,7 @@ export function privateKeyToAddress(
     return '0x0000000000000000000000000000000000000000';
   }
 
-  const pubKey = secp256k1.publicKeyCreate(getKeyArray(key), false);
+  const pubKey = secp256k1.getPublicKey(getKeyArray(key), false);
 
   return publicKeyToAddress(pubKey, withPrefix);
 }
@@ -43,12 +48,12 @@ export function sender(
   withPrefix = true,
 ) {
   const hash = sha3.keccak_256.array(data);
-  const pubKey = secp256k1.ecdsaRecover(
+  const pubKey = secp256k1.Signature.fromBytes(
     new Uint8Array(signature).slice(0, -1),
-    Number(signature[signature.length - 1]),
-    new Uint8Array(hash),
-    false,
-  );
+  )
+    .addRecoveryBit(Number(signature[signature.length - 1]))
+    .recoverPublicKey(new Uint8Array(hash))
+    .toBytes(false);
 
   return publicKeyToAddress(pubKey, withPrefix);
 }
@@ -58,10 +63,10 @@ export function sign(
   key: Uint8Array | number[] | string,
 ): Uint8Array {
   const hash = sha3.keccak_256.array(data);
-  const { signature, recid } = secp256k1.ecdsaSign(
+  const signature = secp256k1.sign(
     new Uint8Array(hash),
     typeof key === 'string' ? hexToUint8Array(key) : new Uint8Array(key),
   );
 
-  return new Uint8Array([...signature, recid]);
+  return new Uint8Array([...signature.toCompactRawBytes(), signature.recovery]);
 }
