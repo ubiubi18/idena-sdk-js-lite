@@ -1,11 +1,11 @@
 import sha3 from 'js-sha3';
 import * as secp256k1 from '@noble/secp256k1';
-import { hmac } from '@noble/hashes/hmac';
-import { sha256 } from '@noble/hashes/sha256';
+import { hmac } from '@noble/hashes/hmac.js';
+import { sha256 } from '@noble/hashes/sha2.js';
 import { hexToUint8Array, toHexString } from './utils';
 
-secp256k1.etc.hmacSha256Sync = (key, ...messages) =>
-  hmac(sha256, key, secp256k1.etc.concatBytes(...messages));
+secp256k1.hashes.hmacSha256 = (key, message) => hmac(sha256, key, message);
+secp256k1.hashes.sha256 = sha256;
 
 function getKeyArray(key: Uint8Array | number[] | string): Uint8Array {
   return typeof key === 'string' ? hexToUint8Array(key) : new Uint8Array(key);
@@ -48,14 +48,18 @@ export function sender(
   withPrefix = true,
 ) {
   const hash = sha3.keccak_256.array(data);
-  const pubKey = secp256k1.Signature.fromBytes(
-    new Uint8Array(signature).slice(0, -1),
-  )
-    .addRecoveryBit(Number(signature[signature.length - 1]))
-    .recoverPublicKey(new Uint8Array(hash))
-    .toBytes(false);
+  const compactSignature = new Uint8Array(signature).slice(0, -1);
+  const recovery = Number(signature[signature.length - 1]);
+  const pubKey = secp256k1.recoverPublicKey(
+    new Uint8Array([recovery, ...compactSignature]),
+    new Uint8Array(hash),
+    { prehash: false },
+  );
 
-  return publicKeyToAddress(pubKey, withPrefix);
+  return publicKeyToAddress(
+    secp256k1.Point.fromBytes(pubKey).toBytes(false),
+    withPrefix,
+  );
 }
 
 export function sign(
@@ -66,7 +70,12 @@ export function sign(
   const signature = secp256k1.sign(
     new Uint8Array(hash),
     typeof key === 'string' ? hexToUint8Array(key) : new Uint8Array(key),
+    { format: 'recovered', prehash: false },
   );
+  const recovery = signature[0];
+  if (recovery === undefined) {
+    throw new Error('Failed to generate recoverable signature');
+  }
 
-  return new Uint8Array([...signature.toCompactRawBytes(), signature.recovery]);
+  return new Uint8Array([...signature.slice(1), recovery]);
 }

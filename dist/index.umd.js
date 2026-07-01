@@ -5,10 +5,10 @@
  */
 
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@bufbuild/protobuf/codegenv2'), require('@bufbuild/protobuf'), require('bn.js'), require('decimal.js'), require('js-sha3'), require('@noble/secp256k1'), require('@noble/hashes/hmac'), require('@noble/hashes/sha256')) :
-  typeof define === 'function' && define.amd ? define(['exports', '@bufbuild/protobuf/codegenv2', '@bufbuild/protobuf', 'bn.js', 'decimal.js', 'js-sha3', '@noble/secp256k1', '@noble/hashes/hmac', '@noble/hashes/sha256'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.idenaSdkJsLite = {}, global.codegenv2, global.protobuf, global.BN, global.Decimal, global.sha3, global.nobleSecp256k1, global.nobleHashesHmac, global.nobleHashesSha256));
-})(this, (function (exports, codegenv2, protobuf, BN, Decimal, sha3, secp256k1, hmac, sha256) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@bufbuild/protobuf/codegenv2'), require('@bufbuild/protobuf'), require('bn.js'), require('decimal.js'), require('js-sha3'), require('@noble/secp256k1'), require('@noble/hashes/hmac.js'), require('@noble/hashes/sha2.js')) :
+  typeof define === 'function' && define.amd ? define(['exports', '@bufbuild/protobuf/codegenv2', '@bufbuild/protobuf', 'bn.js', 'decimal.js', 'js-sha3', '@noble/secp256k1', '@noble/hashes/hmac.js', '@noble/hashes/sha2.js'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.idenaSdkJsLite = {}, global.codegenv2, global.protobuf, global.BN, global.Decimal, global.sha3, global.nobleSecp256k1, global.nobleHashesHmac, global.nobleHashesSha2));
+})(this, (function (exports, codegenv2, protobuf, BN, Decimal, sha3, secp256k1, hmac_js, sha2_js) { 'use strict';
 
   function _interopNamespaceDefault(e) {
     var n = Object.create(null);
@@ -556,7 +556,8 @@
       }
   }
 
-  secp256k1__namespace.etc.hmacSha256Sync = (key, ...messages) => hmac.hmac(sha256.sha256, key, secp256k1__namespace.etc.concatBytes(...messages));
+  secp256k1__namespace.hashes.hmacSha256 = (key, message) => hmac_js.hmac(sha2_js.sha256, key, message);
+  secp256k1__namespace.hashes.sha256 = sha2_js.sha256;
   function getKeyArray(key) {
       return typeof key === 'string' ? hexToUint8Array(key) : new Uint8Array(key);
   }
@@ -576,16 +577,19 @@
   }
   function sender(data, signature, withPrefix = true) {
       const hash = sha3.keccak_256.array(data);
-      const pubKey = secp256k1__namespace.Signature.fromBytes(new Uint8Array(signature).slice(0, -1))
-          .addRecoveryBit(Number(signature[signature.length - 1]))
-          .recoverPublicKey(new Uint8Array(hash))
-          .toBytes(false);
-      return publicKeyToAddress(pubKey, withPrefix);
+      const compactSignature = new Uint8Array(signature).slice(0, -1);
+      const recovery = Number(signature[signature.length - 1]);
+      const pubKey = secp256k1__namespace.recoverPublicKey(new Uint8Array([recovery, ...compactSignature]), new Uint8Array(hash), { prehash: false });
+      return publicKeyToAddress(secp256k1__namespace.Point.fromBytes(pubKey).toBytes(false), withPrefix);
   }
   function sign(data, key) {
       const hash = sha3.keccak_256.array(data);
-      const signature = secp256k1__namespace.sign(new Uint8Array(hash), typeof key === 'string' ? hexToUint8Array(key) : new Uint8Array(key));
-      return new Uint8Array([...signature.toCompactRawBytes(), signature.recovery]);
+      const signature = secp256k1__namespace.sign(new Uint8Array(hash), typeof key === 'string' ? hexToUint8Array(key) : new Uint8Array(key), { format: 'recovered', prehash: false });
+      const recovery = signature[0];
+      if (recovery === undefined) {
+          throw new Error('Failed to generate recoverable signature');
+      }
+      return new Uint8Array([...signature.slice(1), recovery]);
   }
 
   const transactionType = {

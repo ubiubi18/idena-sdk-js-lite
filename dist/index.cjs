@@ -12,8 +12,8 @@ var BN = require('bn.js');
 var Decimal = require('decimal.js');
 var sha3 = require('js-sha3');
 var secp256k1 = require('@noble/secp256k1');
-var hmac = require('@noble/hashes/hmac');
-var sha256 = require('@noble/hashes/sha256');
+var hmac_js = require('@noble/hashes/hmac.js');
+var sha2_js = require('@noble/hashes/sha2.js');
 
 function _interopNamespaceDefault(e) {
   var n = Object.create(null);
@@ -561,7 +561,8 @@ class CallContractAttachment {
     }
 }
 
-secp256k1__namespace.etc.hmacSha256Sync = (key, ...messages) => hmac.hmac(sha256.sha256, key, secp256k1__namespace.etc.concatBytes(...messages));
+secp256k1__namespace.hashes.hmacSha256 = (key, message) => hmac_js.hmac(sha2_js.sha256, key, message);
+secp256k1__namespace.hashes.sha256 = sha2_js.sha256;
 function getKeyArray(key) {
     return typeof key === 'string' ? hexToUint8Array(key) : new Uint8Array(key);
 }
@@ -581,16 +582,19 @@ function privateKeyToAddress(key, withPrefix = true) {
 }
 function sender(data, signature, withPrefix = true) {
     const hash = sha3.keccak_256.array(data);
-    const pubKey = secp256k1__namespace.Signature.fromBytes(new Uint8Array(signature).slice(0, -1))
-        .addRecoveryBit(Number(signature[signature.length - 1]))
-        .recoverPublicKey(new Uint8Array(hash))
-        .toBytes(false);
-    return publicKeyToAddress(pubKey, withPrefix);
+    const compactSignature = new Uint8Array(signature).slice(0, -1);
+    const recovery = Number(signature[signature.length - 1]);
+    const pubKey = secp256k1__namespace.recoverPublicKey(new Uint8Array([recovery, ...compactSignature]), new Uint8Array(hash), { prehash: false });
+    return publicKeyToAddress(secp256k1__namespace.Point.fromBytes(pubKey).toBytes(false), withPrefix);
 }
 function sign(data, key) {
     const hash = sha3.keccak_256.array(data);
-    const signature = secp256k1__namespace.sign(new Uint8Array(hash), typeof key === 'string' ? hexToUint8Array(key) : new Uint8Array(key));
-    return new Uint8Array([...signature.toCompactRawBytes(), signature.recovery]);
+    const signature = secp256k1__namespace.sign(new Uint8Array(hash), typeof key === 'string' ? hexToUint8Array(key) : new Uint8Array(key), { format: 'recovered', prehash: false });
+    const recovery = signature[0];
+    if (recovery === undefined) {
+        throw new Error('Failed to generate recoverable signature');
+    }
+    return new Uint8Array([...signature.slice(1), recovery]);
 }
 
 const transactionType = {
