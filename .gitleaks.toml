@@ -1,0 +1,11 @@
+title = "idena-sdk-js-lite gitleaks config"
+
+[[allowlists]]
+description = "Deterministic transaction signature test vector private key"
+condition = "AND"
+paths = [
+  '''src/models/transactions/transaction\.test\.ts''',
+]
+regexes = [
+  '''d28778329bdd4d8a9b6addaed6ad5ecfc8aa9b40cdd4b09bbb409b976b026ca2''',
+]
