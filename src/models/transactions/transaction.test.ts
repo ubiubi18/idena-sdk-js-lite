@@ -52,7 +52,7 @@ describe('transaction', () => {
     expect(tx.sender).toBe(__ADDRESS__);
   });
 
-  it.only('signature test 2', () => {
+  it('signature test 2', () => {
     const tx = new Transaction({
       epoch: 55,
       nonce: 10,
@@ -67,7 +67,7 @@ describe('transaction', () => {
     expect(tx.sender).toBe(__ADDRESS__);
   });
 
-  it.only('signature test 3', () => {
+  it('signature test 3', () => {
     const tx = new Transaction().fromHex(
       '0a290801100c180f2a09056bc75e2d6310000032082676179a205d70a03a010042090a0105120101120101',
     );
@@ -101,7 +101,7 @@ describe('transaction', () => {
 
     expect(tx2.gas).toBe(1229680);
 
-    const attachment = new StoreToIpfsAttachment({ size: 5 });
+    const attachment = new StoreToIpfsAttachment({ size: 987 });
 
     const tx3 = new Transaction({
       nonce: 1,
