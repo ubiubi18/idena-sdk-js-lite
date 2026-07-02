@@ -8,7 +8,7 @@
 
 > **calculateGasCost**(`feePerGas`, `gas`): `string`
 
-Defined in: [utils.ts:54](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/utils.ts#L54)
+Defined in: [utils.ts:54](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/utils.ts#L54)
 
 ## Parameters
 

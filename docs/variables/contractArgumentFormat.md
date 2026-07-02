@@ -8,4 +8,4 @@
 
 > `const` **contractArgumentFormat**: `Record`\<[`ContractArgumentFormatKey`](../type-aliases/ContractArgumentFormatKey.md), [`ContractArgumentFormatValue`](../type-aliases/ContractArgumentFormatValue.md)\>
 
-Defined in: [models/transactions/attachments/contracts/types.ts:41](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/types.ts#L41)
+Defined in: [models/transactions/attachments/contracts/types.ts:41](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/types.ts#L41)

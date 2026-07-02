@@ -8,7 +8,7 @@
 
 > **floatStringToDna**(`value`): `BN`
 
-Defined in: [utils.ts:44](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/utils.ts#L44)
+Defined in: [utils.ts:44](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/utils.ts#L44)
 
 ## Parameters
 

@@ -6,7 +6,7 @@
 
 # Class: JsonTransaction
 
-Defined in: [models/json/index.ts:1](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L1)
+Defined in: [models/json/index.ts:1](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L1)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [models/json/index.ts:1](https://github.com/N3CR0M4NC3R-dev/idena-sd
 
 > **new JsonTransaction**(`hash`, `type`, `from`, `to`, `amount`, `tips`, `maxFee`, `nonce`, `epoch`, `payload`, `blockHash`, `usedFee`, `timestamp`): `JsonTransaction`
 
-Defined in: [models/json/index.ts:16](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L16)
+Defined in: [models/json/index.ts:16](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L16)
 
 #### Parameters
 
@@ -80,7 +80,7 @@ Defined in: [models/json/index.ts:16](https://github.com/N3CR0M4NC3R-dev/idena-s
 
 > **amount**: `string`
 
-Defined in: [models/json/index.ts:6](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L6)
+Defined in: [models/json/index.ts:6](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L6)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: [models/json/index.ts:6](https://github.com/N3CR0M4NC3R-dev/idena-sd
 
 > **blockHash**: `string`
 
-Defined in: [models/json/index.ts:12](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L12)
+Defined in: [models/json/index.ts:12](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L12)
 
 ***
 
@@ -96,7 +96,7 @@ Defined in: [models/json/index.ts:12](https://github.com/N3CR0M4NC3R-dev/idena-s
 
 > **epoch**: `number`
 
-Defined in: [models/json/index.ts:10](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L10)
+Defined in: [models/json/index.ts:10](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L10)
 
 ***
 
@@ -104,7 +104,7 @@ Defined in: [models/json/index.ts:10](https://github.com/N3CR0M4NC3R-dev/idena-s
 
 > **from**: `string`
 
-Defined in: [models/json/index.ts:4](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L4)
+Defined in: [models/json/index.ts:4](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L4)
 
 ***
 
@@ -112,7 +112,7 @@ Defined in: [models/json/index.ts:4](https://github.com/N3CR0M4NC3R-dev/idena-sd
 
 > **hash**: `string`
 
-Defined in: [models/json/index.ts:2](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L2)
+Defined in: [models/json/index.ts:2](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L2)
 
 ***
 
@@ -120,7 +120,7 @@ Defined in: [models/json/index.ts:2](https://github.com/N3CR0M4NC3R-dev/idena-sd
 
 > **maxFee**: `string`
 
-Defined in: [models/json/index.ts:8](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L8)
+Defined in: [models/json/index.ts:8](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L8)
 
 ***
 
@@ -128,7 +128,7 @@ Defined in: [models/json/index.ts:8](https://github.com/N3CR0M4NC3R-dev/idena-sd
 
 > **nonce**: `number`
 
-Defined in: [models/json/index.ts:9](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L9)
+Defined in: [models/json/index.ts:9](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L9)
 
 ***
 
@@ -136,7 +136,7 @@ Defined in: [models/json/index.ts:9](https://github.com/N3CR0M4NC3R-dev/idena-sd
 
 > **payload**: `string`
 
-Defined in: [models/json/index.ts:11](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L11)
+Defined in: [models/json/index.ts:11](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L11)
 
 ***
 
@@ -144,7 +144,7 @@ Defined in: [models/json/index.ts:11](https://github.com/N3CR0M4NC3R-dev/idena-s
 
 > **timestamp**: `number`
 
-Defined in: [models/json/index.ts:14](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L14)
+Defined in: [models/json/index.ts:14](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L14)
 
 ***
 
@@ -152,7 +152,7 @@ Defined in: [models/json/index.ts:14](https://github.com/N3CR0M4NC3R-dev/idena-s
 
 > **tips**: `string`
 
-Defined in: [models/json/index.ts:7](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L7)
+Defined in: [models/json/index.ts:7](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L7)
 
 ***
 
@@ -160,7 +160,7 @@ Defined in: [models/json/index.ts:7](https://github.com/N3CR0M4NC3R-dev/idena-sd
 
 > **to**: `string`
 
-Defined in: [models/json/index.ts:5](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L5)
+Defined in: [models/json/index.ts:5](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L5)
 
 ***
 
@@ -168,7 +168,7 @@ Defined in: [models/json/index.ts:5](https://github.com/N3CR0M4NC3R-dev/idena-sd
 
 > **type**: `string`
 
-Defined in: [models/json/index.ts:3](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L3)
+Defined in: [models/json/index.ts:3](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L3)
 
 ***
 
@@ -176,4 +176,4 @@ Defined in: [models/json/index.ts:3](https://github.com/N3CR0M4NC3R-dev/idena-sd
 
 > **usedFee**: `string`
 
-Defined in: [models/json/index.ts:13](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L13)
+Defined in: [models/json/index.ts:13](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/json/index.ts#L13)

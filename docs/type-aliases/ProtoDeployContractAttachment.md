@@ -8,7 +8,7 @@
 
 > **ProtoDeployContractAttachment** = `Message`\<`"models.ProtoDeployContractAttachment"`\> & `object`
 
-Defined in: [models/proto/models\_pb.ts:366](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/proto/models_pb.ts#L366)
+Defined in: [models/proto/models\_pb.ts:366](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/proto/models_pb.ts#L366)
 
 ## Type Declaration
 

@@ -8,7 +8,7 @@
 
 > **sender**(`data`, `signature`, `withPrefix?`): `string`
 
-Defined in: [crypto.ts:40](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/crypto.ts#L40)
+Defined in: [crypto.ts:45](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/crypto.ts#L45)
 
 ## Parameters
 

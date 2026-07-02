@@ -8,7 +8,7 @@
 
 > **argumentFromBytes**(`format`, `index`, `bytes`): [`ContractArgument`](../interfaces/ContractArgument.md)
 
-Defined in: [models/transactions/attachments/contracts/utils.ts:17](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/utils.ts#L17)
+Defined in: [models/transactions/attachments/contracts/utils.ts:17](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/utils.ts#L17)
 
 ## Parameters
 
