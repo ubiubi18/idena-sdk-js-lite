@@ -8,7 +8,7 @@
 
 > **sign**(`data`, `key`): `Uint8Array`
 
-Defined in: [crypto.ts:56](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/crypto.ts#L56)
+Defined in: [crypto.ts:65](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/crypto.ts#L65)
 
 ## Parameters
 

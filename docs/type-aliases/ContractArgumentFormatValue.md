@@ -8,4 +8,4 @@
 
 > **ContractArgumentFormatValue** = `"default"` \| `"byte"` \| `"int8"` \| `"uint64"` \| `"int64"` \| `"string"` \| `"bigint"` \| `"hex"` \| `"dna"`
 
-Defined in: [models/transactions/attachments/contracts/types.ts:31](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/types.ts#L31)
+Defined in: [models/transactions/attachments/contracts/types.ts:31](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/types.ts#L31)

@@ -8,7 +8,7 @@
 
 > **privateKeyToAddress**(`key`, `withPrefix?`): `string`
 
-Defined in: [crypto.ts:27](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/crypto.ts#L27)
+Defined in: [crypto.ts:32](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/crypto.ts#L32)
 
 ## Parameters
 

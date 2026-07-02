@@ -8,4 +8,4 @@
 
 > `const` **DNA\_BASE**: `"1000000000000000000"` = `'1000000000000000000'`
 
-Defined in: [utils.ts:6](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/utils.ts#L6)
+Defined in: [utils.ts:6](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/utils.ts#L6)

@@ -6,7 +6,7 @@
 
 # Class: Transaction
 
-Defined in: [models/transactions/transaction.ts:89](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L89)
+Defined in: [models/transactions/transaction.ts:89](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L89)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [models/transactions/transaction.ts:89](https://github.com/N3CR0M4NC
 
 > **new Transaction**(`init?`): `Transaction`
 
-Defined in: [models/transactions/transaction.ts:101](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L101)
+Defined in: [models/transactions/transaction.ts:101](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L101)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [models/transactions/transaction.ts:101](https://github.com/N3CR0M4N
 
 > **get** **amount**(): `BN` \| `null`
 
-Defined in: [models/transactions/transaction.ts:161](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L161)
+Defined in: [models/transactions/transaction.ts:161](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L161)
 
 ##### Returns
 
@@ -44,7 +44,7 @@ Defined in: [models/transactions/transaction.ts:161](https://github.com/N3CR0M4N
 
 > **set** **amount**(`amount`): `void`
 
-Defined in: [models/transactions/transaction.ts:157](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L157)
+Defined in: [models/transactions/transaction.ts:157](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L157)
 
 ##### Parameters
 
@@ -64,7 +64,7 @@ Defined in: [models/transactions/transaction.ts:157](https://github.com/N3CR0M4N
 
 > **get** **epoch**(): `number`
 
-Defined in: [models/transactions/transaction.ts:135](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L135)
+Defined in: [models/transactions/transaction.ts:135](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L135)
 
 ##### Returns
 
@@ -74,7 +74,7 @@ Defined in: [models/transactions/transaction.ts:135](https://github.com/N3CR0M4N
 
 > **set** **epoch**(`epoch`): `void`
 
-Defined in: [models/transactions/transaction.ts:131](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L131)
+Defined in: [models/transactions/transaction.ts:131](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L131)
 
 ##### Parameters
 
@@ -94,7 +94,7 @@ Defined in: [models/transactions/transaction.ts:131](https://github.com/N3CR0M4N
 
 > **get** **gas**(): `number`
 
-Defined in: [models/transactions/transaction.ts:212](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L212)
+Defined in: [models/transactions/transaction.ts:212](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L212)
 
 ##### Returns
 
@@ -108,7 +108,7 @@ Defined in: [models/transactions/transaction.ts:212](https://github.com/N3CR0M4N
 
 > **get** **hash**(): `string`
 
-Defined in: [models/transactions/transaction.ts:193](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L193)
+Defined in: [models/transactions/transaction.ts:193](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L193)
 
 ##### Returns
 
@@ -122,7 +122,7 @@ Defined in: [models/transactions/transaction.ts:193](https://github.com/N3CR0M4N
 
 > **get** **maxFee**(): `BN` \| `null`
 
-Defined in: [models/transactions/transaction.ts:169](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L169)
+Defined in: [models/transactions/transaction.ts:169](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L169)
 
 ##### Returns
 
@@ -132,7 +132,7 @@ Defined in: [models/transactions/transaction.ts:169](https://github.com/N3CR0M4N
 
 > **set** **maxFee**(`maxFee`): `void`
 
-Defined in: [models/transactions/transaction.ts:165](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L165)
+Defined in: [models/transactions/transaction.ts:165](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L165)
 
 ##### Parameters
 
@@ -152,7 +152,7 @@ Defined in: [models/transactions/transaction.ts:165](https://github.com/N3CR0M4N
 
 > **get** **nonce**(): `number`
 
-Defined in: [models/transactions/transaction.ts:127](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L127)
+Defined in: [models/transactions/transaction.ts:127](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L127)
 
 ##### Returns
 
@@ -162,7 +162,7 @@ Defined in: [models/transactions/transaction.ts:127](https://github.com/N3CR0M4N
 
 > **set** **nonce**(`nonce`): `void`
 
-Defined in: [models/transactions/transaction.ts:123](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L123)
+Defined in: [models/transactions/transaction.ts:123](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L123)
 
 ##### Parameters
 
@@ -182,7 +182,7 @@ Defined in: [models/transactions/transaction.ts:123](https://github.com/N3CR0M4N
 
 > **get** **payload**(): `Uint8Array`\<`ArrayBufferLike`\> \| `null`
 
-Defined in: [models/transactions/transaction.ts:185](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L185)
+Defined in: [models/transactions/transaction.ts:185](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L185)
 
 ##### Returns
 
@@ -192,7 +192,7 @@ Defined in: [models/transactions/transaction.ts:185](https://github.com/N3CR0M4N
 
 > **set** **payload**(`payload`): `void`
 
-Defined in: [models/transactions/transaction.ts:181](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L181)
+Defined in: [models/transactions/transaction.ts:181](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L181)
 
 ##### Parameters
 
@@ -212,7 +212,7 @@ Defined in: [models/transactions/transaction.ts:181](https://github.com/N3CR0M4N
 
 > **get** **sender**(): `string` \| `null`
 
-Defined in: [models/transactions/transaction.ts:197](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L197)
+Defined in: [models/transactions/transaction.ts:197](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L197)
 
 ##### Returns
 
@@ -226,7 +226,7 @@ Defined in: [models/transactions/transaction.ts:197](https://github.com/N3CR0M4N
 
 > **get** **signature**(): `Uint8Array`\<`ArrayBufferLike`\> \| `null`
 
-Defined in: [models/transactions/transaction.ts:189](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L189)
+Defined in: [models/transactions/transaction.ts:189](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L189)
 
 ##### Returns
 
@@ -240,7 +240,7 @@ Defined in: [models/transactions/transaction.ts:189](https://github.com/N3CR0M4N
 
 > **get** **tips**(): `BN` \| `null`
 
-Defined in: [models/transactions/transaction.ts:177](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L177)
+Defined in: [models/transactions/transaction.ts:177](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L177)
 
 ##### Returns
 
@@ -250,7 +250,7 @@ Defined in: [models/transactions/transaction.ts:177](https://github.com/N3CR0M4N
 
 > **set** **tips**(`tips`): `void`
 
-Defined in: [models/transactions/transaction.ts:173](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L173)
+Defined in: [models/transactions/transaction.ts:173](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L173)
 
 ##### Parameters
 
@@ -270,7 +270,7 @@ Defined in: [models/transactions/transaction.ts:173](https://github.com/N3CR0M4N
 
 > **get** **to**(): `string` \| `null`
 
-Defined in: [models/transactions/transaction.ts:153](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L153)
+Defined in: [models/transactions/transaction.ts:153](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L153)
 
 ##### Returns
 
@@ -280,7 +280,7 @@ Defined in: [models/transactions/transaction.ts:153](https://github.com/N3CR0M4N
 
 > **set** **to**(`to`): `void`
 
-Defined in: [models/transactions/transaction.ts:147](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L147)
+Defined in: [models/transactions/transaction.ts:147](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L147)
 
 ##### Parameters
 
@@ -300,7 +300,7 @@ Defined in: [models/transactions/transaction.ts:147](https://github.com/N3CR0M4N
 
 > **get** **type**(): `number`
 
-Defined in: [models/transactions/transaction.ts:143](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L143)
+Defined in: [models/transactions/transaction.ts:143](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L143)
 
 ##### Returns
 
@@ -310,7 +310,7 @@ Defined in: [models/transactions/transaction.ts:143](https://github.com/N3CR0M4N
 
 > **set** **type**(`type`): `void`
 
-Defined in: [models/transactions/transaction.ts:139](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L139)
+Defined in: [models/transactions/transaction.ts:139](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L139)
 
 ##### Parameters
 
@@ -328,7 +328,7 @@ Defined in: [models/transactions/transaction.ts:139](https://github.com/N3CR0M4N
 
 > **fromBytes**(`bytes`): `Transaction`
 
-Defined in: [models/transactions/transaction.ts:247](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L247)
+Defined in: [models/transactions/transaction.ts:247](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L247)
 
 #### Parameters
 
@@ -346,7 +346,7 @@ Defined in: [models/transactions/transaction.ts:247](https://github.com/N3CR0M4N
 
 > **fromHex**(`hex`): `Transaction`
 
-Defined in: [models/transactions/transaction.ts:243](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L243)
+Defined in: [models/transactions/transaction.ts:243](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L243)
 
 #### Parameters
 
@@ -364,7 +364,7 @@ Defined in: [models/transactions/transaction.ts:243](https://github.com/N3CR0M4N
 
 > **fromJson**(`jsonTx`): `Transaction`
 
-Defined in: [models/transactions/transaction.ts:267](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L267)
+Defined in: [models/transactions/transaction.ts:267](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L267)
 
 #### Parameters
 
@@ -382,7 +382,7 @@ Defined in: [models/transactions/transaction.ts:267](https://github.com/N3CR0M4N
 
 > **sign**(`key`): `Transaction`
 
-Defined in: [models/transactions/transaction.ts:299](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L299)
+Defined in: [models/transactions/transaction.ts:299](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L299)
 
 #### Parameters
 
@@ -400,7 +400,7 @@ Defined in: [models/transactions/transaction.ts:299](https://github.com/N3CR0M4N
 
 > **toBytes**(): `Uint8Array`
 
-Defined in: [models/transactions/transaction.ts:290](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L290)
+Defined in: [models/transactions/transaction.ts:290](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L290)
 
 #### Returns
 
@@ -412,7 +412,7 @@ Defined in: [models/transactions/transaction.ts:290](https://github.com/N3CR0M4N
 
 > **toHex**(`withPrefix?`): `string`
 
-Defined in: [models/transactions/transaction.ts:308](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L308)
+Defined in: [models/transactions/transaction.ts:308](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L308)
 
 #### Parameters
 
@@ -430,7 +430,7 @@ Defined in: [models/transactions/transaction.ts:308](https://github.com/N3CR0M4N
 
 > `static` **fromBytes**(`bytes`): `Transaction`
 
-Defined in: [models/transactions/transaction.ts:239](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L239)
+Defined in: [models/transactions/transaction.ts:239](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L239)
 
 #### Parameters
 
@@ -448,7 +448,7 @@ Defined in: [models/transactions/transaction.ts:239](https://github.com/N3CR0M4N
 
 > `static` **fromHex**(`hex`): `Transaction`
 
-Defined in: [models/transactions/transaction.ts:235](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L235)
+Defined in: [models/transactions/transaction.ts:235](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/transaction.ts#L235)
 
 #### Parameters
 

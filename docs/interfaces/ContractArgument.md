@@ -6,7 +6,7 @@
 
 # Interface: ContractArgument
 
-Defined in: [models/transactions/attachments/contracts/types.ts:56](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/types.ts#L56)
+Defined in: [models/transactions/attachments/contracts/types.ts:56](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/types.ts#L56)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [models/transactions/attachments/contracts/types.ts:56](https://gith
 
 > **format**: [`ContractArgumentFormatValue`](../type-aliases/ContractArgumentFormatValue.md)
 
-Defined in: [models/transactions/attachments/contracts/types.ts:58](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/types.ts#L58)
+Defined in: [models/transactions/attachments/contracts/types.ts:58](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/types.ts#L58)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [models/transactions/attachments/contracts/types.ts:58](https://gith
 
 > **index**: `number`
 
-Defined in: [models/transactions/attachments/contracts/types.ts:57](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/types.ts#L57)
+Defined in: [models/transactions/attachments/contracts/types.ts:57](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/types.ts#L57)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [models/transactions/attachments/contracts/types.ts:57](https://gith
 
 > **value**: `any`
 
-Defined in: [models/transactions/attachments/contracts/types.ts:59](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/types.ts#L59)
+Defined in: [models/transactions/attachments/contracts/types.ts:59](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/contracts/types.ts#L59)

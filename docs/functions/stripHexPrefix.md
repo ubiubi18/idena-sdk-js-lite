@@ -8,7 +8,7 @@
 
 > **stripHexPrefix**(`str`): `string`
 
-Defined in: [utils.ts:12](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/utils.ts#L12)
+Defined in: [utils.ts:12](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/utils.ts#L12)
 
 ## Parameters
 

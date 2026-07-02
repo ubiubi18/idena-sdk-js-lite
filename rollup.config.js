@@ -1,7 +1,8 @@
 // @ts-check
 
 import terser from '@rollup/plugin-terser';
-import typescript2 from 'rollup-plugin-typescript2';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import typescript from '@rollup/plugin-typescript';
 import { dts } from 'rollup-plugin-dts';
 
 import pkg from './package.json' with { type: 'json' };
@@ -93,11 +94,12 @@ const options = [{
       }),
     ],
     plugins: [
-      typescript2({
-        include: ["src/**/*.ts", "src/**/*.tsx"],
-        clean: true,
-        useTsconfigDeclarationDir: true,
-        tsconfig: './tsconfig.bundle.json',
+      nodeResolve({
+        extensions: ['.mjs', '.js', '.json', '.ts', '.tsx'],
+      }),
+      typescript({
+        include: ["**/*.ts", "**/*.tsx"],
+        tsconfig: './tsconfig.rollup.json',
       }),
     ],
   },

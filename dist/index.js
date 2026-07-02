@@ -16,20 +16,20 @@ var hmac_js = require('@noble/hashes/hmac.js');
 var sha2_js = require('@noble/hashes/sha2.js');
 
 function _interopNamespaceDefault(e) {
-  var n = Object.create(null);
-  if (e) {
-    Object.keys(e).forEach(function (k) {
-      if (k !== 'default') {
-        var d = Object.getOwnPropertyDescriptor(e, k);
-        Object.defineProperty(n, k, d.get ? d : {
-          enumerable: true,
-          get: function () { return e[k]; }
+    var n = Object.create(null);
+    if (e) {
+        Object.keys(e).forEach(function (k) {
+            if (k !== 'default') {
+                var d = Object.getOwnPropertyDescriptor(e, k);
+                Object.defineProperty(n, k, d.get ? d : {
+                    enumerable: true,
+                    get: function () { return e[k]; }
+                });
+            }
         });
-      }
-    });
-  }
-  n.default = e;
-  return Object.freeze(n);
+    }
+    n.default = e;
+    return Object.freeze(n);
 }
 
 var secp256k1__namespace = /*#__PURE__*/_interopNamespaceDefault(secp256k1);
@@ -39,182 +39,182 @@ var secp256k1__namespace = /*#__PURE__*/_interopNamespaceDefault(secp256k1);
 /**
  * Describes the file models.proto.
  */
-const file_models = 
+const file_models =
 /*@__PURE__*/
 codegenv2.fileDesc('Cgxtb2RlbHMucHJvdG8SBm1vZGVscyLhAQoQUHJvdG9UcmFuc2FjdGlvbhIrCgRkYXRhGAEgASgLMh0ubW9kZWxzLlByb3RvVHJhbnNhY3Rpb24uRGF0YRIRCglzaWduYXR1cmUYAiABKAwSDgoGdXNlUmxwGAMgASgIGn0KBERhdGESDQoFbm9uY2UYASABKA0SDQoFZXBvY2gYAiABKA0SDAoEdHlwZRgDIAEoDRIKCgJ0bxgEIAEoDBIOCgZhbW91bnQYBSABKAwSDgoGbWF4RmVlGAYgASgMEgwKBHRpcHMYByABKAwSDwoHcGF5bG9hZBgIIAEoDCIkChRQcm90b0ZsaXBQcml2YXRlS2V5cxIMCgRrZXlzGAEgAygMIpABChtQcm90b1ByaXZhdGVGbGlwS2V5c1BhY2thZ2USNgoEZGF0YRgBIAEoCzIoLm1vZGVscy5Qcm90b1ByaXZhdGVGbGlwS2V5c1BhY2thZ2UuRGF0YRIRCglzaWduYXR1cmUYAiABKAwaJgoERGF0YRIPCgdwYWNrYWdlGAEgASgMEg0KBWVwb2NoGAIgASgNIm4KDFByb3RvRmxpcEtleRInCgRkYXRhGAEgASgLMhkubW9kZWxzLlByb3RvRmxpcEtleS5EYXRhEhEKCXNpZ25hdHVyZRgCIAEoDBoiCgREYXRhEgsKA2tleRgBIAEoDBINCgVlcG9jaBgCIAEoDSJSChpQcm90b1Nob3J0QW5zd2VyQXR0YWNobWVudBIPCgdhbnN3ZXJzGAEgASgMEg8KA3JuZBgCIAEoBEICMAESEgoKY2xpZW50VHlwZRgDIAEoDSJWChlQcm90b0xvbmdBbnN3ZXJBdHRhY2htZW50Eg8KB2Fuc3dlcnMYASABKAwSDQoFcHJvb2YYAiABKAwSCwoDa2V5GAMgASgMEgwKBHNhbHQYBCABKAwiSAoNUHJvdG9JcGZzRmxpcBIOCgZwdWJLZXkYASABKAwSEgoKcHVibGljUGFydBgCIAEoDBITCgtwcml2YXRlUGFydBgDIAEoDCI2ChlQcm90b0ZsaXBTdWJtaXRBdHRhY2htZW50EgsKA2NpZBgBIAEoDBIMCgRwYWlyGAIgASgNIigKGVByb3RvRGVsZXRlRmxpcEF0dGFjaG1lbnQSCwoDY2lkGAEgASgMIi0KG1Byb3RvT25saW5lU3RhdHVzQXR0YWNobWVudBIOCgZvbmxpbmUYASABKAgiUwodUHJvdG9EZXBsb3lDb250cmFjdEF0dGFjaG1lbnQSEAoIQ29kZUhhc2gYASABKAwSDAoEYXJncxgCIAMoDBISCgpjbGllbnRUeXBlGAMgASgNIk8KG1Byb3RvQ2FsbENvbnRyYWN0QXR0YWNobWVudBIOCgZtZXRob2QYASABKAkSDAoEYXJncxgCIAMoDBISCgpjbGllbnRUeXBlGAMgASgNIkQKIFByb3RvVGVybWluYXRlQ29udHJhY3RBdHRhY2htZW50EgwKBGFyZ3MYASADKAwSEgoKY2xpZW50VHlwZRgCIAEoDSKRAQoMUHJvdG9Qcm9maWxlEjAKA2FkcxgBIAMoCzIjLm1vZGVscy5Qcm90b1Byb2ZpbGUuUHJvdG9Qcm9maWxlQWQaTwoOUHJvdG9Qcm9maWxlQWQSCwoDY2lkGAEgASgJEg4KBnRhcmdldBgCIAEoCRIQCghjb250cmFjdBgDIAEoCRIOCgZhdXRob3IYBCABKAkilQEKB1Byb3RvQWQSDQoFdGl0bGUYASABKAkSDAoEZGVzYxgCIAEoCRILCgN1cmwYAyABKAkSDQoFdGh1bWIYBCABKAwSDQoFbWVkaWEYBSABKAwSDwoHdmVyc2lvbhgGIAEoDRIxCgx2b3RpbmdQYXJhbXMYByABKAsyGy5tb2RlbHMuUHJvdG9BZFZvdGluZ1BhcmFtcyJyChNQcm90b0FkVm90aW5nUGFyYW1zEhYKDnZvdGluZ0R1cmF0aW9uGAEgASgNEhwKFHB1YmxpY1ZvdGluZ0R1cmF0aW9uGAIgASgNEg4KBnF1b3J1bRgDIAEoDRIVCg1jb21taXR0ZWVTaXplGAQgASgNIkkKDVByb3RvQWRUYXJnZXQSEAoIbGFuZ3VhZ2UYASABKAkSCwoDYWdlGAIgASgFEgoKAm9zGAMgASgJEg0KBXN0YWtlGAQgASgFIi0KDlByb3RvQWRCdXJuS2V5EgsKA2NpZBgBIAEoCRIOCgZ0YXJnZXQYAiABKAkiNwoaUHJvdG9TdG9yZVRvSXBmc0F0dGFjaG1lbnQSCwoDY2lkGAEgASgMEgwKBHNpemUYAiABKA0iKwocUHJvdG9DaGFuZ2VQcm9maWxlQXR0YWNobWVudBILCgNjaWQYASABKAwiIgoTUHJvdG9CdXJuQXR0YWNobWVudBILCgNrZXkYASABKAliBnByb3RvMw');
 /**
  * Describes the message models.ProtoTransaction.
  * Use `create(ProtoTransactionSchema)` to create a new message.
  */
-const ProtoTransactionSchema = 
+const ProtoTransactionSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 0);
 /**
  * Describes the message models.ProtoTransaction.Data.
  * Use `create(ProtoTransaction_DataSchema)` to create a new message.
  */
-const ProtoTransaction_DataSchema = 
+const ProtoTransaction_DataSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 0, 0);
 /**
  * Describes the message models.ProtoFlipPrivateKeys.
  * Use `create(ProtoFlipPrivateKeysSchema)` to create a new message.
  */
-const ProtoFlipPrivateKeysSchema = 
+const ProtoFlipPrivateKeysSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 1);
 /**
  * Describes the message models.ProtoPrivateFlipKeysPackage.
  * Use `create(ProtoPrivateFlipKeysPackageSchema)` to create a new message.
  */
-const ProtoPrivateFlipKeysPackageSchema = 
+const ProtoPrivateFlipKeysPackageSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 2);
 /**
  * Describes the message models.ProtoPrivateFlipKeysPackage.Data.
  * Use `create(ProtoPrivateFlipKeysPackage_DataSchema)` to create a new message.
  */
-const ProtoPrivateFlipKeysPackage_DataSchema = 
+const ProtoPrivateFlipKeysPackage_DataSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 2, 0);
 /**
  * Describes the message models.ProtoFlipKey.
  * Use `create(ProtoFlipKeySchema)` to create a new message.
  */
-const ProtoFlipKeySchema = 
+const ProtoFlipKeySchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 3);
 /**
  * Describes the message models.ProtoFlipKey.Data.
  * Use `create(ProtoFlipKey_DataSchema)` to create a new message.
  */
-const ProtoFlipKey_DataSchema = 
+const ProtoFlipKey_DataSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 3, 0);
 /**
  * Describes the message models.ProtoShortAnswerAttachment.
  * Use `create(ProtoShortAnswerAttachmentSchema)` to create a new message.
  */
-const ProtoShortAnswerAttachmentSchema = 
+const ProtoShortAnswerAttachmentSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 4);
 /**
  * Describes the message models.ProtoLongAnswerAttachment.
  * Use `create(ProtoLongAnswerAttachmentSchema)` to create a new message.
  */
-const ProtoLongAnswerAttachmentSchema = 
+const ProtoLongAnswerAttachmentSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 5);
 /**
  * Describes the message models.ProtoIpfsFlip.
  * Use `create(ProtoIpfsFlipSchema)` to create a new message.
  */
-const ProtoIpfsFlipSchema = 
+const ProtoIpfsFlipSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 6);
 /**
  * Describes the message models.ProtoFlipSubmitAttachment.
  * Use `create(ProtoFlipSubmitAttachmentSchema)` to create a new message.
  */
-const ProtoFlipSubmitAttachmentSchema = 
+const ProtoFlipSubmitAttachmentSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 7);
 /**
  * Describes the message models.ProtoDeleteFlipAttachment.
  * Use `create(ProtoDeleteFlipAttachmentSchema)` to create a new message.
  */
-const ProtoDeleteFlipAttachmentSchema = 
+const ProtoDeleteFlipAttachmentSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 8);
 /**
  * Describes the message models.ProtoOnlineStatusAttachment.
  * Use `create(ProtoOnlineStatusAttachmentSchema)` to create a new message.
  */
-const ProtoOnlineStatusAttachmentSchema = 
+const ProtoOnlineStatusAttachmentSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 9);
 /**
  * Describes the message models.ProtoDeployContractAttachment.
  * Use `create(ProtoDeployContractAttachmentSchema)` to create a new message.
  */
-const ProtoDeployContractAttachmentSchema = 
+const ProtoDeployContractAttachmentSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 10);
 /**
  * Describes the message models.ProtoCallContractAttachment.
  * Use `create(ProtoCallContractAttachmentSchema)` to create a new message.
  */
-const ProtoCallContractAttachmentSchema = 
+const ProtoCallContractAttachmentSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 11);
 /**
  * Describes the message models.ProtoTerminateContractAttachment.
  * Use `create(ProtoTerminateContractAttachmentSchema)` to create a new message.
  */
-const ProtoTerminateContractAttachmentSchema = 
+const ProtoTerminateContractAttachmentSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 12);
 /**
  * Describes the message models.ProtoProfile.
  * Use `create(ProtoProfileSchema)` to create a new message.
  */
-const ProtoProfileSchema = 
+const ProtoProfileSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 13);
 /**
  * Describes the message models.ProtoProfile.ProtoProfileAd.
  * Use `create(ProtoProfile_ProtoProfileAdSchema)` to create a new message.
  */
-const ProtoProfile_ProtoProfileAdSchema = 
+const ProtoProfile_ProtoProfileAdSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 13, 0);
 /**
  * Describes the message models.ProtoAd.
  * Use `create(ProtoAdSchema)` to create a new message.
  */
-const ProtoAdSchema = 
+const ProtoAdSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 14);
 /**
  * Describes the message models.ProtoAdVotingParams.
  * Use `create(ProtoAdVotingParamsSchema)` to create a new message.
  */
-const ProtoAdVotingParamsSchema = 
+const ProtoAdVotingParamsSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 15);
 /**
  * Describes the message models.ProtoAdTarget.
  * Use `create(ProtoAdTargetSchema)` to create a new message.
  */
-const ProtoAdTargetSchema = 
+const ProtoAdTargetSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 16);
 /**
  * Describes the message models.ProtoAdBurnKey.
  * Use `create(ProtoAdBurnKeySchema)` to create a new message.
  */
-const ProtoAdBurnKeySchema = 
+const ProtoAdBurnKeySchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 17);
 /**
  * Describes the message models.ProtoStoreToIpfsAttachment.
  * Use `create(ProtoStoreToIpfsAttachmentSchema)` to create a new message.
  */
-const ProtoStoreToIpfsAttachmentSchema = 
+const ProtoStoreToIpfsAttachmentSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 18);
 /**
  * Describes the message models.ProtoChangeProfileAttachment.
  * Use `create(ProtoChangeProfileAttachmentSchema)` to create a new message.
  */
-const ProtoChangeProfileAttachmentSchema = 
+const ProtoChangeProfileAttachmentSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 19);
 /**
  * Describes the message models.ProtoBurnAttachment.
  * Use `create(ProtoBurnAttachmentSchema)` to create a new message.
  */
-const ProtoBurnAttachmentSchema = 
+const ProtoBurnAttachmentSchema =
 /*@__PURE__*/
 codegenv2.messageDesc(file_models, 20);
 

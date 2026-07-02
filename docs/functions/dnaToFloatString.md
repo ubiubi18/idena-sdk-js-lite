@@ -8,7 +8,7 @@
 
 > **dnaToFloatString**(`value`): `string`
 
-Defined in: [utils.ts:49](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/utils.ts#L49)
+Defined in: [utils.ts:49](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/utils.ts#L49)
 
 ## Parameters
 

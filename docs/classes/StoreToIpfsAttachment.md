@@ -6,7 +6,7 @@
 
 # Class: StoreToIpfsAttachment
 
-Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:7](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/storeToIpfsAttachment.ts#L7)
+Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:7](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/storeToIpfsAttachment.ts#L7)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:7](https:/
 
 > **new StoreToIpfsAttachment**(`init?`): `StoreToIpfsAttachment`
 
-Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:11](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/storeToIpfsAttachment.ts#L11)
+Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:11](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/storeToIpfsAttachment.ts#L11)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:11](https:
 
 > **get** **cid**(): `Uint8Array`
 
-Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:28](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/storeToIpfsAttachment.ts#L28)
+Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:28](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/storeToIpfsAttachment.ts#L28)
 
 ##### Returns
 
@@ -44,7 +44,7 @@ Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:28](https:
 
 > **set** **cid**(`cid`): `void`
 
-Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:24](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/storeToIpfsAttachment.ts#L24)
+Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:24](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/storeToIpfsAttachment.ts#L24)
 
 ##### Parameters
 
@@ -64,7 +64,7 @@ Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:24](https:
 
 > **get** **size**(): `number`
 
-Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:20](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/storeToIpfsAttachment.ts#L20)
+Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:20](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/storeToIpfsAttachment.ts#L20)
 
 ##### Returns
 
@@ -74,7 +74,7 @@ Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:20](https:
 
 > **set** **size**(`size`): `void`
 
-Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:16](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/storeToIpfsAttachment.ts#L16)
+Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:16](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/storeToIpfsAttachment.ts#L16)
 
 ##### Parameters
 
@@ -92,7 +92,7 @@ Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:16](https:
 
 > **fromBytes**(`bytes`): `StoreToIpfsAttachment`
 
-Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:32](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/storeToIpfsAttachment.ts#L32)
+Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:32](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/storeToIpfsAttachment.ts#L32)
 
 #### Parameters
 
@@ -110,7 +110,7 @@ Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:32](https:
 
 > **toBytes**(): `Uint8Array`\<`ArrayBuffer`\>
 
-Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:41](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/storeToIpfsAttachment.ts#L41)
+Defined in: [models/transactions/attachments/storeToIpfsAttachment.ts:41](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/transactions/attachments/storeToIpfsAttachment.ts#L41)
 
 #### Returns
 

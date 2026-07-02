@@ -8,7 +8,7 @@
 
 > **ProtoFlipKey\_Data** = `Message`\<`"models.ProtoFlipKey.Data"`\> & `object`
 
-Defined in: [models/proto/models\_pb.ts:190](https://github.com/N3CR0M4NC3R-dev/idena-sdk-js-lite/blob/master/src/models/proto/models_pb.ts#L190)
+Defined in: [models/proto/models\_pb.ts:190](https://github.com/ubiubi18/idena-sdk-js-lite/blob/master/src/models/proto/models_pb.ts#L190)
 
 ## Type Declaration
 
