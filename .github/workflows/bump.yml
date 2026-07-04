@@ -6,6 +6,11 @@ on:
       version:
         description: 'Semver type of new version (major / minor / patch)'
         required: true
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
 
 permissions:
   contents: write
@@ -16,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out source
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
@@ -35,6 +40,18 @@ jobs:
 
       - name: Update docs
         run: npm run update-docs
+
+      - name: Dependency audit
+        run: npm audit --audit-level=moderate
+
+      - name: Dependency signature audit
+        run: npm audit signatures
+
+      - name: Test
+        run: npm run test
+
+      - name: Build
+        run: npm run build
 
       - name: Bump version
         env:
