@@ -20,6 +20,10 @@ That command installs the upstream npm release, not this fork's current source.
 This fork has no npm release. Use a reviewed source commit or wait for a new
 upstream package release before depending on these changes in production.
 
+The reviewed candidate commit and downstream consumer pin are vendored in
+[`compatibility/stack-lock.json`](compatibility/stack-lock.json). CI rebuilds
+the committed distribution and rejects any byte-level artifact drift.
+
 ## What was updated
 
 - The native `secp256k1` dependency and its installation/build surface were

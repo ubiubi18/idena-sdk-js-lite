@@ -34,10 +34,12 @@
     "test:unit": "vitest run",
     "lint": "eslint \"*/**/*.{ts,js,json}\" --fix",
     "build": "npm run build:types && rollup --config ./rollup.config.js && npm run build:trim-dist",
+    "build:verify": "node ./scripts/check-reproducible-dist.mjs",
     "build:trim-dist": "node ./scripts/trim-dist-whitespace.mjs",
     "build:types": "tsc -p tsconfig.bundle.json --emitDeclarationOnly",
     "update-docs": "npm run doc && npm run build",
-    "prepublishOnly": "npm run update-docs && npm run test"
+    "audit:compatibility": "node ./scripts/check-compatibility-lock.mjs",
+    "prepublishOnly": "npm run audit:compatibility && npm run update-docs && npm run build:verify && npm run test"
   },
   "repository": {
     "type": "git",
