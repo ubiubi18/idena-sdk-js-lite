@@ -1,5 +1,9 @@
 # idena-sdk-js-lite
 
+## Research disclaimer
+
+This is experimental research software. I cannot guarantee its security, correctness, or fitness for any purpose. Use it at your own risk, take responsibility for your decisions, independently verify changes, and stay vigilant.
+
 Lite JavaScript/TypeScript SDK for Idena transactions, contract attachments,
 cryptography, and generated protobuf models. It omits the provider integrations
 from the full `idena-sdk-js` package.
